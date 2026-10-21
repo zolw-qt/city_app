@@ -1,0 +1,350 @@
+﻿Lp;Numer RSPO;Typ szkoły_placówki;Nazwa szkoły_placówki;Liczba dzieci ogółem;Liczba oddziałów ogółem;Wojewodztwo;Miejscowość;Ulica;Nr domu;Nr lokalu;Kod pocztowy;Specyfika szkoły;Publiczność szkoły_placówki
+1;5398;Punkt przedszkolny;NIEPUBLICZNY PUNKT PRZEDSZKOLNY WESOŁY ZAKĄTEK;25;1;małopolskie;Kraków;Pod Fortem;2;;31-302;brak specyfiki;niepubliczna
+2;6436;Punkt przedszkolny;NIEPUBLICZNY PUNKT PRZEDSZKOLNY PANDA;19;1;małopolskie;Kraków;Leona Petrażyckiego;52;;30-399;brak specyfiki;niepubliczna
+3;6470;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""JARZĘBINKA"" Z ODDZIAŁAMI INTEGRACYJNYMI I SPECJALNYMI W KRAKOWIE";50;5;małopolskie;Kraków;Starowiejska;36;;30-698;brak specyfiki;niepubliczna
+4;6548;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ARCELORMITTAL POLAND ""AKADEMIA MAŁYCH POCIECH W KRAKOWIE""";55;4;małopolskie;Kraków;Osiedle Centrum A;14;;31-925;brak specyfiki;niepubliczna
+5;6577;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""MUSZELKA"" Z ODDZIAŁAMI INTEGRACYJNYMI";392;22;małopolskie;Kraków;Marii i Bolesława Wysłouchów;4;;30-611;brak specyfiki;niepubliczna
+6;9777;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""ULIK"" 2";10;1;małopolskie;Kraków;Krowoderskich Zuchów;16;LU10;31-272;brak specyfiki;niepubliczna
+7;11241;Przedszkole;"NIEPUBLICZNE EUROPEJSKIE PRZEDSZKOLE JĘZYKOWE ""BE HAPPY""";14;1;małopolskie;Kraków;Aleja 3 Maja;9;;30-062;brak specyfiki;niepubliczna
+8;15620;Punkt przedszkolny;"NIEPUBLICZNY SPECJALISTYCZNY PUNKT PRZEDSZKOLNY ""TERAZ MY""";24;1;małopolskie;Kraków;Plac Bohaterów Getta;3;2;30-547;brak specyfiki;niepubliczna
+9;21165;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""TUPTUSIOWA KRAINA""";93;6;małopolskie;Kraków;Lasówka;2;;30-718;brak specyfiki;niepubliczna
+10;24152;Przedszkole;PRZEDSZKOLE MONTESSORI;88;4;małopolskie;Kraków;Szwedzka;68;1;30-315;brak specyfiki;niepubliczna
+11;24945;Przedszkole;PRZEDSZKOLE PRYWATNE NR 1 PILCH TERESA GRAŻYNA;31;2;małopolskie;Kraków;Osiedle Dywizjonu 303;37;1;31-874;brak specyfiki;niepubliczna
+12;26049;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""BAJKOWO"" KATARZYNA KAJM";37;4;małopolskie;Kraków;Prosta;35B;;30-814;brak specyfiki;niepubliczna
+13;26050;Przedszkole;PRZEDSZKOLE PRYWATNE NR 9 OGNISKO JĘZYKOWO-ARTYSTYCZNE;25;2;małopolskie;Kraków;Ciechocińska;12;;30-433;brak specyfiki;niepubliczna
+14;26051;Przedszkole;"PRZEDSZKOLE PRYWATNE ""DOROTKA"" Z ODDZIAŁAMI INTEGRACYJNYMI";45;3;małopolskie;Kraków;Kuźnicy Kołłątajowskiej;29 A-B;;31-234;brak specyfiki;niepubliczna
+15;26928;Przedszkole;PRZEDSZKOLE NR 18 IM. BŁ. MATKI MAŁGORZATY SZEWCZYK PROWADZONE PRZEZ SIOSTRY SERAFITKI;50;2;małopolskie;Kraków;Łowiecka;5;;30-106;brak specyfiki;publiczna
+16;28198;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""KRASNAL""";108;9;małopolskie;Kraków;Gwarna;2a;;30-693;brak specyfiki;niepubliczna
+17;29868;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""POD SKRZYDŁAMI"" W KRAKOWIE";19;2;małopolskie;Kraków;"Batalionu ""Skała"" AK";2;;31-273;brak specyfiki;niepubliczna
+18;29907;Przedszkole;PRZEDSZKOLE NR 7 ZGROMADZENIA SIÓSTR SERAFITEK;39;2;małopolskie;Kraków;Grzegórzecka;40;;31-531;brak specyfiki;publiczna
+19;29908;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE SPECJALNE ZWIĄZKU POLSKICH KAWALERÓW MALTAŃSKICH;65;12;małopolskie;Kraków;Aleja Kasztanowa;4a;;30-227;specjalna;niepubliczna
+20;29909;Przedszkole;PRZEDSZKOLE NIEPUBLICZNE KĄCIK ŚWIATA;41;4;małopolskie;Kraków;Ostatnia;1d;;31-444;brak specyfiki;niepubliczna
+21;34336;Przedszkole;PRZEDSZKOLE INTEGRACYJNE MONTESSORI;71;4;małopolskie;Kraków;Prochowa;12;;31-532;brak specyfiki;niepubliczna
+22;34338;Przedszkole;"PRYWATNE PRZEDSZKOLE ""BAJECZKA""";20;1;małopolskie;Kraków;Osiedle 2 Pułku Lotniczego;44;1a;31-870;brak specyfiki;niepubliczna
+23;43367;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE EKOLOGICZNE ""KARUZELA"" W KRAKOWIE";12;2;małopolskie;Kraków;Marii i Bolesława Wysłouchów;30C;;30-611;brak specyfiki;niepubliczna
+24;43368;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE INTEGRACYJNE ""PTASIE RADIO""";52;3;małopolskie;Kraków;Ojcowska;51;;31-344;brak specyfiki;niepubliczna
+25;43372;Przedszkole;PRZEDSZKOLE NR 3 ZGROMADZENIA SIÓSTR KANONICZEK DUCHA ŚWIĘTEGO IM. BŁ. OJCA GWIDONA;49;4;małopolskie;Kraków;Lotnicza;4a;;31-462;brak specyfiki;publiczna
+26;43373;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE INTEGRACYJNE BAJKOWA KRAINA KLINY;21;3;małopolskie;Kraków;Maksymiliana Rutkowskiego;7;;30-437;brak specyfiki;niepubliczna
+27;43374;Przedszkole;PRYWATNE PRZEDSZKOLE NR 18;46;4;małopolskie;Kraków;Osiedle Kolorowe;8;48;31-939;brak specyfiki;niepubliczna
+28;43376;Przedszkole;PRZEDSZKOLE PUBLICZNE IM. BŁ. EDMUNDA BOJANOWSKIEGO ZGROMADZENIA SIÓSTR SŁUŻEBNICZEK BDNP W KRAKOWIE;20;1;małopolskie;Kraków;Biskupia;16;;31-144;brak specyfiki;publiczna
+29;43522;Przedszkole;PRZEDSZKOLE PUBLICZNE NR 15 ZGROMADZENIA SIÓSTR FELICJANEK;36;2;małopolskie;Kraków;Smoleńsk;2;;31-107;brak specyfiki;publiczna
+30;43524;Przedszkole;NIEPUBLICZNE DWUJĘZYCZNE PRZEDSZKOLE DA VINCI'S INTERNATIONAL PRESCHOOL W KRAKOWIE;62;5;małopolskie;Kraków;Henryka Wieniawskiego;66;1;31-436;brak specyfiki;niepubliczna
+31;43525;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""MALOWANY KONIK""";34;3;małopolskie;Kraków;mjr. Łupaszki;13;;30-198;brak specyfiki;niepubliczna
+32;52728;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""NIEBIESKA ŻABKA""";88;4;małopolskie;Kraków;Mieszczańska;13;;30-313;brak specyfiki;niepubliczna
+33;52729;Przedszkole;PRYWATNE PRZEDSZKOLE NR 4;17;2;małopolskie;Kraków;Osiedle Teatralne;30;39;31-947;brak specyfiki;niepubliczna
+34;52831;Przedszkole;PRZEDSZKOLE NIEPUBLICZNE IM. MATKI ANNY KAWOREK;50;3;małopolskie;Kraków;Kosocicka;38A;;30-694;brak specyfiki;niepubliczna
+35;52842;Przedszkole;"PRZEDSZKOLE PRYWATNE ""MOTYLOWO""";30;2;małopolskie;Kraków;Dekarzy;17;;30-414;brak specyfiki;niepubliczna
+36;52843;Przedszkole;"PRYWATNE PRZEDSZKOLE ""NIEDŹWIADKA GRUCHATKI""";;;małopolskie;Kraków;Kaczeńcowa;4;;31-831;brak specyfiki;niepubliczna
+37;52845;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""MISIOWE PRZEDSZKOLE""";52;3;małopolskie;Kraków;Władysława Łokietka;135;1/3/5/6;31-263;brak specyfiki;niepubliczna
+38;58250;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""POD GWIAZDKAMI""";73;4;małopolskie;Kraków;prof. Władysława Szafera;2;;31-543;brak specyfiki;niepubliczna
+39;58251;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""POLSKO-ANGIELSKIE CLEVER KIDS""";51;5;małopolskie;Kraków;Franciszka Bielaka;5;;30-218;brak specyfiki;niepubliczna
+40;58252;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""KRAINA UŚMIECHU"" W KRAKOWIE";115;7;małopolskie;Kraków;Marii Jaremy;12;;31-318;brak specyfiki;niepubliczna
+41;58253;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE ABC;29;2;małopolskie;Kraków;Aleja Kasztanowa;76A;;30-227;brak specyfiki;niepubliczna
+42;58257;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE ŚWIĘTEJ KLARY;30;2;małopolskie;Kraków;Konstantego Ildefonsa Gałczyńskiego;7;;31-581;brak specyfiki;niepubliczna
+43;58280;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""MISIE FILIPISIE""";88;5;małopolskie;Kraków;Aleja Jana Pawła II;192;;31-982;brak specyfiki;niepubliczna
+44;58281;Przedszkole;PRZEDSZKOLE NR 41 IM. ANIOŁÓW STRÓŻÓW ZGROMADZENIA SIÓSTR AUGUSTIANEK;79;4;małopolskie;Kraków;Piekarska;7A;;31-067;brak specyfiki;publiczna
+45;58282;Przedszkole;"PRYWATNE PRZEDSZKOLE NR 11 ""ENGLISH SPEAKING PRE-SCHOOL GLOB-KUBICKA JOANNA KUBICKA"" W KRAKOWIE";27;2;małopolskie;Kraków;Osiedle Szkolne;37;;31-978;brak specyfiki;niepubliczna
+46;59649;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""ISKIERKA""";111;5;małopolskie;Kraków;Leopolda Staffa;6;;30-069;brak specyfiki;niepubliczna
+47;64271;Przedszkole;PRZEDSZKOLE NIEPUBLICZNE BENIAMINEK;42;3;małopolskie;Kraków;płk. pil. Stefana Łaszkiewicza;4;U 1.1;31-445;brak specyfiki;niepubliczna
+48;64325;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ARTYSTYCZNE ""MARZENIE""";48;3;małopolskie;Kraków;Kuźnicy Kołłątajowskiej;13D;;31-234;brak specyfiki;niepubliczna
+49;70865;Przedszkole;PUBLICZNE PRZEDSZKOLE SIÓSTR NAZARETANEK IM. NAJŚWIĘTSZEJ RODZINY;100;4;małopolskie;Kraków;Nazaretańska;1;;30-685;brak specyfiki;publiczna
+50;70868;Przedszkole;"PRYWATNE PRZEDSZKOLE ""TĘCZOWA KRAINA""";11;1;małopolskie;Kraków;Dobczycka;76;;30-620;brak specyfiki;niepubliczna
+51;70872;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""ZIARENKO""";74;6;małopolskie;Kraków;Dekarzy;22;;30-414;brak specyfiki;niepubliczna
+52;71158;Przedszkole;PRZEDSZKOLE WALDORFSKIE;12;2;małopolskie;Kraków;Królowej Jadwigi;327;;30-234;brak specyfiki;niepubliczna
+53;71891;Przedszkole;PRZEDSZKOLE NR 2 ZGROMADZENIA SIÓSTR MIŁOSIERDZIA;134;6;małopolskie;Kraków;Warszawska;6;;31-155;brak specyfiki;publiczna
+54;72070;Przedszkole;PRZEDSZKOLE ZGROMADZENIA SŁUŻEBNIC NAJŚWIĘTSZEGO SERCA JEZUSOWEGO;38;2;małopolskie;Kraków;Plac gen. Władysława Sikorskiego;12;;31-115;brak specyfiki;publiczna
+55;72071;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE ZGROMADZENIA SIÓSTR NAJŚWIĘTSZEJ DUSZY CHRYSTUSA PANA;142;8;małopolskie;Kraków;Piaszczysta;8;;31-226;brak specyfiki;niepubliczna
+56;72072;Przedszkole;PRZEDSZKOLE PUBLICZNE NR 42 ZGROMADZENIA SIÓSTR URSZULANEK UNII RZYMSKIEJ;86;4;małopolskie;Kraków;Starowiślna;3;;31-038;brak specyfiki;publiczna
+57;72155;Punkt przedszkolny;NIEPUBLICZNY TERAPEUTYCZNY PUNKT PRZEDSZKOLNY PROMITIS;11;1;małopolskie;Kraków;Sanocka;1;;30-620;brak specyfiki;niepubliczna
+58;72157;Przedszkole;"PRZEDSZKOLE ""RAINBOW""";50;4;małopolskie;Kraków;Gabrieli Zapolskiej;10c;;30-126;brak specyfiki;niepubliczna
+59;72159;Przedszkole;"PRZEDSZKOLE MUZYCZNE ""SCHERZO""";38;4;małopolskie;Kraków;Grzegorza Korzeniaka;14;;30-298;brak specyfiki;niepubliczna
+60;72160;Przedszkole;"PRYWATNE PRZEDSZKOLE MONTESSORI ""SAMODZIELNY MALUCH""";19;1;małopolskie;Kraków;Aliny;9;;31-417;brak specyfiki;niepubliczna
+61;72161;Przedszkole;"PRYWATNE PRZEDSZKOLE ""UŚMIECH""";11;1;małopolskie;Kraków;Wenecja;6;;31-117;brak specyfiki;niepubliczna
+62;72174;Przedszkole;PRZEDSZKOLE NR 40 ZGROMADZENIA CÓREK BOŻEJ MIŁOŚCI IM. JANA PAWŁA II;101;6;małopolskie;Kraków;Pędzichów;16;;31-152;brak specyfiki;publiczna
+63;72175;Przedszkole;PRZEDSZKOLE NR 26 IM. ŚW. FRANCISZKA Z ASYŻU ZGROMADZENIA SIÓSTR SERAFITEK W KRAKOWIE;75;3;małopolskie;Kraków;Żwirki i Wigury;3;;31-465;brak specyfiki;publiczna
+64;72197;Przedszkole;PRYWATNE PRZEDSZKOLE ŚW. FRANCISZKA;66;4;małopolskie;Kraków;Sosnowiecka;12;;31-345;brak specyfiki;niepubliczna
+65;72198;Przedszkole;PRZEDSZKOLE NR 17 SIÓSTR SŁUŻEBNICZEK;110;5;małopolskie;Kraków;Kazimierza Kordylewskiego;14;;31-542;brak specyfiki;publiczna
+66;72204;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE KATOLICKIE ""MALI ARTYŚCI""";31;2;małopolskie;Kraków;Zmartwychwstania Pańskiego;2A;;30-648;brak specyfiki;niepubliczna
+67;72206;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE MONTESSORI W KRAKOWIE ODKRYWCY ŚWIATA;24;2;małopolskie;Kraków;Franciszka Bujaka;8;;30-611;brak specyfiki;niepubliczna
+68;72210;Przedszkole;PRZEDSZKOLE PARAFII MIŁOSIERDZIA BOŻEGO NR 188 W KRAKOWIE;70;3;małopolskie;Kraków;Osiedle Na Wzgórzach;1A;;31-721;brak specyfiki;publiczna
+69;72216;Przedszkole;ŹRÓDŁO - PRZEDSZKOLE FUNDACJI STERNIK - KRAKÓW;136;7;małopolskie;Kraków;Zygmuntowska;12a;;31-314;brak specyfiki;niepubliczna
+70;72498;Punkt przedszkolny;"PUNKT PRZEDSZKOLNY ""MONTESSORI HOUSE""";23;1;małopolskie;Kraków;Benedykta Cesarza;9;;30-427;brak specyfiki;niepubliczna
+71;73889;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""HAPPY KIDS""";53;5;małopolskie;Kraków;Wacława Lipińskiego;5A;1;30-349;brak specyfiki;niepubliczna
+72;73917;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""BAJKA"" W KRAKOWIE";226;13;małopolskie;Kraków;Lubostroń;22G;;30-383;brak specyfiki;niepubliczna
+73;75069;Przedszkole;PRZEDSZKOLE NIEPUBLICZNE EKOSKRZAT;60;4;małopolskie;Kraków;Rakuś;72;;30-864;brak specyfiki;niepubliczna
+74;75733;Przedszkole;"PRYWATNE PRZEDSZKOLE ""MAŁY DWOREK""";33;3;małopolskie;Kraków;Legnicka;26;;31-216;brak specyfiki;niepubliczna
+75;78990;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE ZACZAROWANA PLANETA;42;3;małopolskie;Kraków;Jana Kurczaba;5;;30-868;brak specyfiki;niepubliczna
+76;79084;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE SPORTOWO-TANECZNE ""FAIR PLAY""";102;7;małopolskie;Kraków;Jana Dekerta;24;;30-703;brak specyfiki;niepubliczna
+77;79976;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""WESOŁE TYGRYSKI""";94;6;małopolskie;Kraków;Mariana Słoneckiego;5;;31-417;brak specyfiki;niepubliczna
+78;79981;Przedszkole;KRAKOWSKIE NIEPUBLICZNE PRZEDSZKOLE MONTESSORI;28;2;małopolskie;Kraków;Zarzecze;23;;30-134;brak specyfiki;niepubliczna
+79;80065;Przedszkole;"SPOŁECZNE PRZEDSZKOLE STO IM. JULIUSZA SŁOWACKIEGO W KRAKOWIE ""JULEK""";47;3;małopolskie;Kraków;Krowoderska;8;;31-142;brak specyfiki;niepubliczna
+80;80085;Przedszkole;PRYWATNE PRZEDSZKOLE KRAKOWSKA BAJECZKA;20;1;małopolskie;Kraków;Eliasza Radzikowskiego;1;;31-305;brak specyfiki;niepubliczna
+81;80093;Przedszkole;"PRYWATNE PRZEDSZKOLE ""KANGUROWE PRZEDSZKOLE""";190;12;małopolskie;Kraków;Vlastimila Hofmana;9;;30-210;brak specyfiki;niepubliczna
+82;80096;Przedszkole;"PRYWATNE PRZEDSZKOLE ""SŁONECZNE WZGÓRZE""";61;4;małopolskie;Kraków;Osiedle Kazimierzowskie;30;;31-844;brak specyfiki;niepubliczna
+83;80099;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""MALI ARTYŚCI""";55;4;małopolskie;Kraków;Sołtysowska;12a;47-48;31-589;brak specyfiki;niepubliczna
+84;80459;Przedszkole;"PRZEDSZKOLE PRYWATNE ""MOJE PRZEDSZKOLE ABC""";22;1;małopolskie;Kraków;Myśliwska;76;;30-718;brak specyfiki;niepubliczna
+85;81703;Przedszkole;"PRYWATNE PRZEDSZKOLE ""PIOTRUSIA PANA"" I. ŁĘCKA-KARNAS, B. TARAPACZ";44;3;małopolskie;Kraków;Żabiniec;45;;31-215;brak specyfiki;niepubliczna
+86;81706;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""BAJKOWE KRÓLESTWO""";61;4;małopolskie;Kraków;Feliksa Konecznego;2;5-6U;31-216;brak specyfiki;niepubliczna
+87;81730;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""MAŁY KSIĄŻĘ"" W KRAKOWIE";;;małopolskie;Kraków;ks. Józefa Meiera;20G;1A;31-236;brak specyfiki;niepubliczna
+88;84140;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""RADOSNA CHATKA""";28;2;małopolskie;Kraków;Ułanów;41;;31-460;brak specyfiki;niepubliczna
+89;84142;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""NUTKI""";54;3;małopolskie;Kraków;Przewóz;36;1;30-716;brak specyfiki;niepubliczna
+90;84664;Przedszkole;"PRZEDSZKOLE ""PĘPUŚ ŚWIATA""";56;5;małopolskie;Kraków;Łużycka;28;;30-693;brak specyfiki;niepubliczna
+91;84665;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""POMYSŁOWY PRZEDSZKOLAK""";124;7;małopolskie;Kraków;Bułgarska;15;;30-409;brak specyfiki;niepubliczna
+92;84671;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE REKREACYJNO-SPORTOWE ""MAJA I GUCIO""";101;6;małopolskie;Kraków;Profesora Bolesława Wiktora Wicherkiewicza;19;3-4;30-389;brak specyfiki;niepubliczna
+93;90314;Przedszkole;SPECJALNE PRZEDSZKOLE PUBLICZNE DLA DZIECI AFATYCZNYCH ZGROMADZENIA SIÓSTR FELICJANEK;22;2;małopolskie;Kraków;Harcmistrza Stanisława Millana;15;;30-610;specjalna;publiczna
+94;91303;Przedszkole;PRZEDSZKOLE IM. ŚW. VIRGINII CB KATOLICKIEGO CENTRUM EDUKACYJNEGO CARITAS ARCHIDIECEZJI KRAKOWSKIEJ;56;3;małopolskie;Kraków;Łobzowska;49;;31-139;brak specyfiki;publiczna
+95;106736;Punkt przedszkolny;"NIEPUBLICZNY PUNKT PRZEDSZKOLNY ""GADUŚ""";15;1;małopolskie;Kraków;Józefa Chełmońskiego;102b;13-14;31-340;brak specyfiki;niepubliczna
+96;114504;Przedszkole;PRZEDSZKOLE NIEPUBLICZNE BRIGHT CHILD;154;9;małopolskie;Kraków;Przemysłowa;4;459;30-701;brak specyfiki;niepubliczna
+97;115659;Punkt przedszkolny;NIEPUBLICZNY PUNKT PRZEDSZKOLNY MAŁE IMPRESJE;17;1;małopolskie;Kraków;Wrocławska;55;;30-011;brak specyfiki;niepubliczna
+98;118982;Punkt przedszkolny;MIĘDZYNARODOWY NIEPUBLICZNY PUNKT PRZEDSZKOLNY DAISY;16;1;małopolskie;Kraków;Krymska;6C;;30-389;brak specyfiki;niepubliczna
+99;119030;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE JĘZYKOWE ""DELFINKI""";11;1;małopolskie;Kraków;Kijanki;2;;30-693;brak specyfiki;niepubliczna
+100;119215;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""AKADEMIA SKRZATÓW""";15;1;małopolskie;Kraków;Księdza Kardynała Adama Stefana Sapiehy;65;;31-644;brak specyfiki;niepubliczna
+101;119920;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""CHATKA NIEDŹWIADKA"" W KRAKOWIE";23;2;małopolskie;Kraków;Krawiecka;18;;30-649;brak specyfiki;niepubliczna
+102;120376;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""DZIECIAKI I MY""";20;2;małopolskie;Kraków;Wodna;4;;30-556;brak specyfiki;niepubliczna
+103;120379;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""OGRODY MUZYKI""";21;1;małopolskie;Kraków;Vlastimila Hofmana;22;;30-210;brak specyfiki;niepubliczna
+104;120383;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE SPORTOWE ""FILEMONKI""";74;3;małopolskie;Kraków;Stanisława Lema;24;LU3;31-571;brak specyfiki;niepubliczna
+105;120460;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE INTEGRACYJNE ""BAJKOWA KRAINA""";19;2;małopolskie;Kraków;Osiedle Bohaterów Września;3;3a;31-620;brak specyfiki;niepubliczna
+106;120485;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE JAGIELLOŃSKIEGO CENTRUM INNOWACJI W KRAKOWIE;50;3;małopolskie;Kraków;Profesora Michała Bobrzyńskiego;14 bud. C;;30-348;brak specyfiki;niepubliczna
+107;120827;Przedszkole;PUBLICZNE RAJSKIE PRZEDSZKOLE;106;5;małopolskie;Kraków;Jana Izydora Sztaudyngera;5;;30-694;brak specyfiki;publiczna
+108;123245;Przedszkole;PRZEDSZKOLE PUBLICZNE BIELANKOWO;70;4;małopolskie;Kraków;Orla;52;;30-244;brak specyfiki;publiczna
+109;123482;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE SPECJALNE DLA DZIECI Z ZABURZENIAMI ZE SPEKTRUM AUTYZMU ""PRZYSTANEK PRZEDSZKOLAK""";37;12;małopolskie;Kraków;Prądnicka;10;;30-002;specjalna;niepubliczna
+110;124152;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""MAŁE ANIOŁKI""";165;8;małopolskie;Kraków;Lubocka;1E;;31-766;brak specyfiki;publiczna
+111;124339;Przedszkole;PRZEDSZKOLE PUBLICZNE CHATKA MAŁOLATKA;60;4;małopolskie;Kraków;Chmieleniec;35;14,15;30-348;brak specyfiki;publiczna
+112;124468;Przedszkole;PRZEDSZKOLE PRYWATNE GUZIKOWO;21;2;małopolskie;Kraków;Kobierzyńska;174 A;;30-382;brak specyfiki;niepubliczna
+113;124875;Przedszkole;PRZEDSZKOLE PUBLICZNE PARAFII CHRYSTUSA KRÓLA IM. ŚW. JANA PAWŁA II;45;4;małopolskie;Kraków;Aleja 29 Listopada;195;;31-241;brak specyfiki;publiczna
+114;125127;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""OPEN FUTURE""";50;4;małopolskie;Kraków;dr. Józefa Babińskiego;4;;30-393;brak specyfiki;niepubliczna
+115;125357;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""SAFARI""";5;2;małopolskie;Kraków;Łowienicka;14;1;30-613;brak specyfiki;niepubliczna
+116;125398;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""KOCHANE PRZEDSZKOLE""";42;2;małopolskie;Kraków;Aleja Kasztanowa;9;;30-227;brak specyfiki;niepubliczna
+117;125423;Przedszkole;PUBLICZNE PRZEDSZKOLE HOPKIDS NR 1 W KRAKOWIE;44;3;małopolskie;Kraków;Osiedle Dywizjonu 303;21c;LU 81-84;31-873;brak specyfiki;publiczna
+118;125424;Przedszkole;PUBLICZNE PRZEDSZKOLE HOPKIDS NR 2 W KRAKOWIE;151;8;małopolskie;Kraków;Michała Żaka;19;Lu4-5;30-612;brak specyfiki;publiczna
+119;125495;Przedszkole;PUBLICZNE PRZEDSZKOLE CHATKA MALUSZKA;72;6;małopolskie;Kraków;Trybuny Ludów;71;;30-660;brak specyfiki;publiczna
+120;125496;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE Z ODDZIAŁAMI INTEGRACYJNYMI ""CZYŻYK""";62;4;małopolskie;Kraków;Moczydło;7a;;30-698;brak specyfiki;niepubliczna
+121;125514;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""TAM TAM I TU""";17;2;małopolskie;Kraków;Królewska;55;;30-081;brak specyfiki;niepubliczna
+122;125525;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""AKADEMIA UŚMIECHU""";33;2;małopolskie;Kraków;Śnieżna;15;;30-822;brak specyfiki;niepubliczna
+123;125539;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""PYZA I JA""";66;4;małopolskie;Kraków;Wincentego Danka;8;U11, U12, U18;31-229;brak specyfiki;niepubliczna
+124;125550;Przedszkole;LOKOMOTYWA - NIEPUBLICZNE PRZEDSZKOLE NR 2 W KRAKOWIE;13;1;małopolskie;Kraków;Zygmunta Glogera;5;;31-222;brak specyfiki;niepubliczna
+125;126407;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""A KUKU""";32;2;małopolskie;Kraków;Osiedle Piastów;23A;;31-624;brak specyfiki;publiczna
+126;126513;Przedszkole;"PRZEDSZKOLE PUBLICZNE ""NASZE SKARBY"" NR 1";104;5;małopolskie;Kraków;Osiedle Dywizjonu 303;22B;;31-873;brak specyfiki;publiczna
+127;126776;Przedszkole;"PRZEDSZKOLE PUBLICZNE ""KRAKUSEK""";53;4;małopolskie;Kraków;Turystyczna;8;;31-213;brak specyfiki;publiczna
+128;126867;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""A DLACZEGO"" W KRAKOWIE";72;4;małopolskie;Kraków;Liściasta;6;;30-385;brak specyfiki;publiczna
+129;127046;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""PAN SAMOCHODZIK""";31;2;małopolskie;Kraków;Brzeska;18F;;31-998;brak specyfiki;publiczna
+130;127367;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""GLUKUSIE"" W KRAKOWIE";100;4;małopolskie;Kraków;Ujastek;5b;;31-752;brak specyfiki;publiczna
+131;127449;Przedszkole;PRZEDSZKOLE PUBLICZNE BABY GARDEN;155;11;małopolskie;Kraków;Białoprądnicka;10;29;31-221;brak specyfiki;publiczna
+132;127455;Przedszkole;PRZEDSZKOLE PUBLICZNE MAŁY INŻYNIER;104;6;małopolskie;Kraków;Stanisława Skarżyńskiego;3;;31-866;brak specyfiki;publiczna
+133;127917;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE PRACOWITE PSZCZÓŁKI;23;1;małopolskie;Kraków;Eliasza Radzikowskiego;40A;;31-305;brak specyfiki;niepubliczna
+134;127918;Przedszkole;PUBLICZNE PRZEDSZKOLE HOPKIDS NR 3 W KRAKOWIE;49;3;małopolskie;Kraków;Osiedle 2 Pułku Lotniczego;1E;6A-6B;31-867;brak specyfiki;publiczna
+135;128673;Przedszkole;PRZEDSZKOLE PUBLICZNE MOTYLKI W KRAKOWIE;87;4;małopolskie;Kraków;Osiedle Na Lotnisku;1;U14;31-801;brak specyfiki;publiczna
+136;128880;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""A KUKU"" NR 2";33;2;małopolskie;Kraków;Osiedle Piastów;21B;;31-624;brak specyfiki;publiczna
+137;129204;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""MAŁY EINSTEINEK""";74;4;małopolskie;Kraków;Koszykarska;21c;3;30-717;brak specyfiki;niepubliczna
+138;129336;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ARTYSTYCZNO-JĘZYKOWE ""AKADEMIA BYSTRZAKA""";9;1;małopolskie;Kraków;Jurka Bitschana;4;;31-410;brak specyfiki;niepubliczna
+139;129341;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""JUNIOR COLLEGE""";79;4;małopolskie;Kraków;Stanisława Działowskiego;54a;;30-399;brak specyfiki;niepubliczna
+140;129352;Przedszkole;"PRZEDSZKOLE PUBLICZNE ""ŻYRAFA""";67;4;małopolskie;Kraków;Wspólna;46;;30-654;brak specyfiki;publiczna
+141;129494;Przedszkole;"PRZEDSZKOLE PUBLICZNE ""KARMELKOWY ZAKĄTEK""";150;9;małopolskie;Kraków;Porucznika Wąchały;7;;30-608;brak specyfiki;publiczna
+142;129562;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""PUCHATEK I PRZYJACIELE""";9;1;małopolskie;Kraków;Zaborze;1;;30-429;brak specyfiki;publiczna
+143;129565;Przedszkole;"PUBLICZNE PRZEDSZKOLE ANGLOJĘZYCZNE ""THE LITTLE STEPS""";217;9;małopolskie;Kraków;Fałęcka;39;;30-441;brak specyfiki;publiczna
+144;129659;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""GWIAZDECZKA""";45;3;małopolskie;Kraków;Katowicka;47;;31-351;brak specyfiki;niepubliczna
+145;129660;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""MONTESSORI HOUSE""";32;2;małopolskie;Kraków;Doktora Zygmunta Łuczyńskiego;10;1-2;30-427;brak specyfiki;niepubliczna
+146;129679;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""CENTRUM MALUSZEK""";17;2;małopolskie;Kraków;Obozowa;41A;4;30-383;brak specyfiki;niepubliczna
+147;129767;Przedszkole;PUBLICZNE PRZEDSZKOLE MALUTKOWO W KRAKOWIE;104;5;małopolskie;Kraków;Józefa Łepkowskiego;7;LU 2,3;31-423;brak specyfiki;publiczna
+148;129842;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE SPECJALNE ""TIBA""";24;5;małopolskie;Kraków;Wrocławska;75;;30-011;specjalna;niepubliczna
+149;129845;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""STOKROTKI"" NR 2";90;4;małopolskie;Kraków;Skotnicka;101;;30-394;brak specyfiki;publiczna
+150;129975;Przedszkole;"PUBLICZNE PRZEDSZKOLE ARTYSTYCZNO-JĘZYKOWE ""PUCHATKOWO""";60;3;małopolskie;Kraków;Lipska;55;;30-721;brak specyfiki;publiczna
+151;129978;Przedszkole;PUBLICZNE PRZEDSZKOLE GABI;161;7;małopolskie;Kraków;dr. Jana Piltza;20A;;30-392;brak specyfiki;publiczna
+152;130260;Przedszkole;PUBLICZNE PRZEDSZKOLE FIKU MIKU;89;4;małopolskie;Kraków;Gwieździsta;7;;30-383;brak specyfiki;publiczna
+153;130492;Przedszkole;PUBLICZNE PRZEDSZKOLE RADOŚĆ;44;4;małopolskie;Kraków;Sebastiana Klonowica;17c;;30-654;brak specyfiki;publiczna
+154;131176;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE SUNNY KIDS W KRAKOWIE;41;2;małopolskie;Kraków;Andrzeja Frycza-Modrzewskiego;3;88;31-216;brak specyfiki;niepubliczna
+155;131231;Przedszkole;PRZEDSZKOLE PUBLICZNE TUPTUSIOWO;140;8;małopolskie;Kraków;Kamieniecka;2;;30-389;brak specyfiki;publiczna
+156;131476;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""MALINOWY DOMEK""";169;9;małopolskie;Kraków;Osiedle Oświecenia;31;1A;31-636;brak specyfiki;niepubliczna
+157;131513;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""GALAKTYKA DZIECI""";49;2;małopolskie;Kraków;Eliasza Radzikowskiego;100J;2;31-315;brak specyfiki;niepubliczna
+158;131636;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE MONTESSORI MAŁYMI KROCZKAMI;41;4;małopolskie;Kraków;Klemensa Janickiego;1A;4U;31-452;brak specyfiki;niepubliczna
+159;131670;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""PLUSZOWY MIŚ""";83;5;małopolskie;Kraków;Katowicka;30;;31-351;brak specyfiki;niepubliczna
+160;131729;Przedszkole;"PRZEDSZKOLE PUBLICZNE ""ZACZAROWANY DOMEK"" W KRAKOWIE";22;1;małopolskie;Kraków;Legnicka;18;;31-216;brak specyfiki;publiczna
+161;132099;Przedszkole;PUBLICZNE PRZEDSZKOLE NIESAMORZĄDOWE NANULAK W KRAKOWIE;80;4;małopolskie;Kraków;Wadowicka;6;;30-415;brak specyfiki;publiczna
+162;132146;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE Z ODDZIAŁEM INTEGRACYJNYM WESOŁY ZAKĄTEK;16;1;małopolskie;Kraków;Pod Fortem;2c;LU1;31-302;brak specyfiki;niepubliczna
+163;132198;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""BAJLANDIA""";154;7;małopolskie;Kraków;Czorsztyńska;3b;;30-665;brak specyfiki;publiczna
+164;132200;Przedszkole;"PRZEDSZKOLE PUBLICZNE ""BAJKOWY ŚWIAT"" W KRAKOWIE";88;4;małopolskie;Kraków;Aleja 29 Listopada;191;L9,L10;31-241;brak specyfiki;publiczna
+165;132202;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""ŹRÓDEŁKO"" W KRAKOWIE";42;3;małopolskie;Kraków;Łany;14a;;30-385;brak specyfiki;publiczna
+166;132203;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""AKADEMIA ELFÓW""";48;3;małopolskie;Kraków;Kazimierza Wielkiego;117;;30-074;brak specyfiki;publiczna
+167;132399;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE JĘZYKOWE FIRST STEP;24;1;małopolskie;Kraków;Beskidzka;4c;;30-622;brak specyfiki;niepubliczna
+168;132400;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""ŚWIAT DZIECKA MONTESSORI""";28;2;małopolskie;Kraków;Zarzecze;14;;30-134;brak specyfiki;niepubliczna
+169;132406;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""HAPPY KIDS"" NR 1 W KRAKOWIE";64;4;małopolskie;Kraków;por. Halszki;28;1;30-611;brak specyfiki;publiczna
+170;132418;Przedszkole;PUBLICZNE PRZEDSZKOLE KRAKOWIACZEK;110;6;małopolskie;Kraków;Mikołaja Reja;13;;31-216;brak specyfiki;publiczna
+171;132438;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE - SALWATOR;46;3;małopolskie;Kraków;Tadeusza Kościuszki;88;;30-114;brak specyfiki;niepubliczna
+172;132446;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""AKADEMIA MAŁYCH EINSTEINÓW""";17;1;małopolskie;Kraków;Reduta;36;9;31-421;brak specyfiki;niepubliczna
+173;132457;Przedszkole;"PRZEDSZKOLE PUBLICZNE ""WESOŁE SMOKI""";25;1;małopolskie;Kraków;Wrocławska;8;1;30-006;brak specyfiki;publiczna
+174;132545;Przedszkole;PUBLICZNE PRZEDSZKOLE WESOŁA POMARAŃCZA;64;3;małopolskie;Kraków;Jerzego Bajana;8;;31-520;brak specyfiki;publiczna
+175;132564;Przedszkole;"PUBLICZNE PRZEDSZKOLE RUCZAJ ""JAŚ I MAŁGOSIA""";39;3;małopolskie;Kraków;Zamiejska;2;;30-382;brak specyfiki;publiczna
+176;132623;Przedszkole;"SPORTOWO-ARTYSTYCZNE NIEPUBLICZNE PRZEDSZKOLE ""MALINOWE SKRZATY""";17;2;małopolskie;Kraków;Irysowa;5;1;30-411;brak specyfiki;niepubliczna
+177;132651;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""MAŁY NEWTONEK"" W KRAKOWIE";43;3;małopolskie;Kraków;ks. Kazimierza Siemaszki;32b;;31-207;brak specyfiki;publiczna
+178;132909;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""MAJOWA ŁĄKA"" W KRAKOWIE";94;5;małopolskie;Kraków;Komuny Paryskiej;2a;;30-389;brak specyfiki;publiczna
+179;133336;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""ZIELONA WYSPA""";95;4;małopolskie;Kraków;Doktora Judyma;16;;30-436;brak specyfiki;publiczna
+180;133423;Przedszkole;"PRZEDSZKOLE PUBLICZNE ""ŻYRAFY""";75;4;małopolskie;Kraków;Żabiniec;68;;31-215;brak specyfiki;publiczna
+181;133840;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE SPORTOWO-JĘZYKOWE KRAINA PIOTRUSIA PANA;84;5;małopolskie;Kraków;Macieja Dębskiego;125;;30-499;brak specyfiki;niepubliczna
+182;263126;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE JĘZYKOWO-SPORTOWE FAIR PLAY JP SPORTS;6;1;małopolskie;Kraków;Dobrego Pasterza;52;L5;31-416;brak specyfiki;niepubliczna
+183;263684;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""FRAJDA""";10;1;małopolskie;Kraków;Miodowa;24;;31-055;brak specyfiki;niepubliczna
+184;263887;Przedszkole;PRZEDSZKOLE NIEPUBLICZNE ART-CHILD;26;2;małopolskie;Kraków;Cystersów;26C;LU5;31-553;brak specyfiki;niepubliczna
+185;264364;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE MONTESSORI AVALON Z ODDZIAŁAMI INTEGRACYJNYMI;69;4;małopolskie;Kraków;Sodowa;42;;30-376;brak specyfiki;niepubliczna
+186;264575;Przedszkole;PUBLICZNE PRZEDSZKOLE POD WEZWANIEM MATKI BOŻEJ BRZEMIENNEJ;35;4;małopolskie;Kraków;Wichrowa;7;;30-438;brak specyfiki;publiczna
+187;264586;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE AKADEMIA MUMINKÓW;70;4;małopolskie;Kraków;Turniejowa;40;;30-619;brak specyfiki;niepubliczna
+188;265096;Przedszkole;"PRZEDSZKOLE PUBLICZNE ""CHILDREN'S ENGLISH CENTRE""";73;4;małopolskie;Kraków;Siarczana;15;;30-432;brak specyfiki;publiczna
+189;265097;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""THE LITTLE STEPS NR 1""";100;4;małopolskie;Kraków;Siewna;30B;;31-231;brak specyfiki;publiczna
+190;265939;Przedszkole;LOKOMOTYWA - PUBLICZNE PRZEDSZKOLE W KRAKOWIE;46;3;małopolskie;Kraków;Eliasza Radzikowskiego;47c;;31-315;brak specyfiki;publiczna
+191;265940;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""KROPELKA 2""";90;4;małopolskie;Kraków;Borkowska;30;;30-438;brak specyfiki;publiczna
+192;265942;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""KROPELKA""";55;3;małopolskie;Kraków;Majora Mieczysława Słabego;18;;30-394;brak specyfiki;publiczna
+193;265950;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""MISIE-PYSIE""";44;2;małopolskie;Kraków;Komuny Paryskiej;54;;30-389;brak specyfiki;publiczna
+194;266490;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE MONTESSORI DREAMS;71;4;małopolskie;Kraków;Armii Krajowej;97;LU1;30-150;brak specyfiki;niepubliczna
+195;267309;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE INTEGRACYJNE LALOBA;28;2;małopolskie;Kraków;Beskidzka;30 c;;30-611;brak specyfiki;niepubliczna
+196;267680;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE HAPPY TRAIN W KRAKOWIE;35;2;małopolskie;Kraków;Bolesława Orlińskiego;5;;31-878;brak specyfiki;niepubliczna
+197;267745;Przedszkole;PRZEDSZKOLE NIEPUBLICZNE NIEDŹWIADKI;40;3;małopolskie;Kraków;Borkowska;3;;30-438;brak specyfiki;niepubliczna
+198;268073;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE CRACOW INTERNATIONAL SCHOOL;59;3;małopolskie;Kraków;Andrzeja Sokołowskiego;19a;;31-436;brak specyfiki;niepubliczna
+199;268144;Przedszkole;"NIEPUBLICZNE DWUJĘZYCZNE PRZEDSZKOLE ""KIDS&CO.""";49;3;małopolskie;Kraków;Powstańców Wielkopolskich;13H;;30-707;brak specyfiki;niepubliczna
+200;268209;Przedszkole;PUBLICZNE PRZEDSZKOLE MALI PRZYJACIELE W KRAKOWIE;44;2;małopolskie;Kraków;Piotra Michałowskiego;11;1;31-126;brak specyfiki;publiczna
+201;268210;Przedszkole;PUBLICZNE PRZEDSZKOLE KRÓLA MACIUSIA;28;2;małopolskie;Kraków;Kazimierza Wielkiego;42;;30-074;brak specyfiki;publiczna
+202;268228;Punkt przedszkolny;"WALDORFSKO-LEŚNY NIEPUBLICZNY PUNKT PRZEDSZKOLNY ""MOMO""";19;1;małopolskie;Kraków;Ćwikłowa;20E;;30-377;brak specyfiki;niepubliczna
+203;268765;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""OZON""";37;2;małopolskie;Kraków;Stefana Banacha;31;U1;31-235;brak specyfiki;niepubliczna
+204;268831;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""MINI MINI""";154;9;małopolskie;Kraków;Osiedle Na Lotnisku;1;U4;31-801;brak specyfiki;niepubliczna
+205;268837;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE REKREACYJNO-SPORTOWE ""MAJA I GUCIO 2""";49;3;małopolskie;Kraków;Osiedle Avia;1;;31-877;brak specyfiki;niepubliczna
+206;268839;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE FAIR PLAY EDUKACJA I SPORT;61;4;małopolskie;Kraków;Lipska;8;;30-721;brak specyfiki;niepubliczna
+207;268975;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""WOLNE PRZEDSZKOLE WALDORFSKIE""";;;małopolskie;Kraków;Zawiła;2;;30-423;brak specyfiki;niepubliczna
+208;268977;Przedszkole;MILUSIE PRZEDSZKOLE NIEPUBLICZNE;72;3;małopolskie;Kraków;Fabryczna;5;lok. U1;31-553;brak specyfiki;niepubliczna
+209;269304;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""SMOCZA DOLINA"" Z ODDZIAŁAMI INTEGRACYJNYMI";19;2;małopolskie;Kraków;Fiszera;32;;31-321;brak specyfiki;niepubliczna
+210;269908;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""BAJKOWA DOLINKA""";30;2;małopolskie;Kraków;Osiedle Centrum E;15a;;31-934;brak specyfiki;publiczna
+211;270106;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""FILEMON""";52;4;małopolskie;Kraków;Murarska;3B;3LU;31-311;brak specyfiki;niepubliczna
+212;270183;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""A KUKU"" NR 3";67;3;małopolskie;Kraków;Osiedle Mistrzejowice;9;2A;31-640;brak specyfiki;publiczna
+213;270184;Przedszkole;PUBLICZNE PRZEDSZKOLE FAIR PLAY NR 1 W KRAKOWIE;115;6;małopolskie;Kraków;Dobrego Pasterza;52;L4;31-416;brak specyfiki;publiczna
+214;270185;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""WESOŁA CIUCHCIA"" W KRAKOWIE";112;6;małopolskie;Kraków;Kobierzyńska;165;4;30-382;brak specyfiki;publiczna
+215;270215;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""HAPPY KIDS"" NR 6 W KRAKOWIE";42;3;małopolskie;Kraków;Osiedle Bohaterów Września;19;;31-620;brak specyfiki;publiczna
+216;270216;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""ŚWIAT DZIECKA""";151;7;małopolskie;Kraków;Józefa Chełmońskiego;148;22;31-348;brak specyfiki;publiczna
+217;270325;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""HAPPY FEET"" W KRAKOWIE";66;3;małopolskie;Kraków;Mała Góra;49;;30-864;brak specyfiki;publiczna
+218;271091;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""KOLOROWY OBŁOCZEK""";65;4;małopolskie;Kraków;Kantorowicka;189;;31-763;brak specyfiki;niepubliczna
+219;271667;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE HEALTHY KIDS W KRAKOWIE;38;2;małopolskie;Kraków;Władysława Łokietka;136a;;31-334;brak specyfiki;niepubliczna
+220;271928;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""MALI ARTYŚCI""";73;4;małopolskie;Kraków;Marii i Bolesława Wysłouchów;55;;30-611;brak specyfiki;publiczna
+221;272242;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE SPORTOWO-TANECZNE AN FAIR PLAY;48;4;małopolskie;Kraków;Mariana Domagały;45;;30-741;brak specyfiki;niepubliczna
+222;272428;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE HARMONIA;13;2;małopolskie;Kraków;bp. Piotra Tomickiego;22;;31-982;brak specyfiki;niepubliczna
+223;272602;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""CHODŹMY NA POLE""";39;4;małopolskie;Kraków;Odmętowa;97;;31-979;brak specyfiki;niepubliczna
+224;272605;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""FISTASZKI""";13;3;małopolskie;Kraków;Wielicka;228;;30-663;brak specyfiki;niepubliczna
+225;273081;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE LITTLE STARS;13;1;małopolskie;Kraków;Henryka Rodakowskiego;1;;30-094;brak specyfiki;niepubliczna
+226;273082;Przedszkole;NIEPUBLICZNE INTEGRACYJNE PRZEDSZKOLE MONTESSORI;16;2;małopolskie;Kraków;Mydlnicka;5;;30-120;brak specyfiki;niepubliczna
+227;273244;Przedszkole;PUBLICZNE PRZEDSZKOLE PRZYJACIELE;50;2;małopolskie;Kraków;Józefa Chełmońskiego;35;;31-301;brak specyfiki;publiczna
+228;273285;Przedszkole;"PUBLICZNE POZYTYWNE PRZEDSZKOLE NR 1 ""DEPARTAMENT UŚMIECHU"" W KRAKOWIE";66;3;małopolskie;Kraków;Marii i Bolesława Wysłouchów;22a;2;30-611;brak specyfiki;publiczna
+229;273368;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""BAJKOWY DWOREK""";45;2;małopolskie;Kraków;Wacława Sieroszewskiego;3;;31-914;brak specyfiki;niepubliczna
+230;273415;Przedszkole;PRZEDSZKOLE NIEPUBLICZNE HIGH FIVE;69;4;małopolskie;Kraków;Osiedle Kolorowe;10;U014;31-939;brak specyfiki;niepubliczna
+231;273481;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""ABC MONTESSORI""";45;2;małopolskie;Kraków;Grzegórzecka;73B;;31-559;brak specyfiki;niepubliczna
+232;273482;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE SPORTOWO-JĘZYKOWE FAIR PLAY EDUSPORT;30;2;małopolskie;Kraków;Jana Kilińskiego;2;;30-308;brak specyfiki;niepubliczna
+233;273519;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""AKADEMIA MAŁYCH EINSTEINÓW 1""";21;1;małopolskie;Kraków;Marchołta;3;2;31-416;brak specyfiki;niepubliczna
+234;273543;Przedszkole;PRZEDSZKOLE PUBLICZNE BRYKAJĄCE TYGRYSY W KRAKOWIE;101;4;małopolskie;Kraków;Kazimierza Wierzyńskiego;33;LU3,77,78;30-198;brak specyfiki;publiczna
+235;273948;Przedszkole;PUBLICZNE PRZEDSZKOLE KRAINA W KRAKOWIE;45;3;małopolskie;Kraków;Arcybiskupa Zygmunta Szczęsnego Felińskiego;22;U1;31-236;brak specyfiki;publiczna
+236;274262;Przedszkole;PUBLICZNE PRZEDSZKOLE BOROWINKA W KRAKOWIE;24;1;małopolskie;Kraków;Mariusza Zaruskiego;4;;30-698;brak specyfiki;publiczna
+237;274371;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""HOOPLAKID""";;1;małopolskie;Kraków;dr. Jana Piltza;42;;30-392;brak specyfiki;niepubliczna
+238;274463;Przedszkole;PUBLICZNE PRZEDSZKOLE BAJKA W KRAKOWIE;83;4;małopolskie;Kraków;Osiedle Urocze;6;;31-952;brak specyfiki;publiczna
+239;274465;Przedszkole;PUBLICZNE PRZEDSZKOLE SKARBY W KRAKOWIE;44;3;małopolskie;Kraków;Adama Bochenka;10;;30-693;brak specyfiki;publiczna
+240;274522;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE JĘZYKOWO-SPORTOWE ""HAPPY TIME""";57;3;małopolskie;Kraków;Anny Szwed-Śniadowskiej;42;LU2;30-389;brak specyfiki;niepubliczna
+241;275100;Przedszkole;PUBLICZNE PRZEDSZKOLE MISIE-PYSIE 2 W KRAKOWIE;84;4;małopolskie;Kraków;Komuny Paryskiej;60;;30-389;brak specyfiki;publiczna
+242;275269;Przedszkole;PUBLICZNE PRZEDSZKOLE STACYJKOWO W KRAKOWIE;49;2;małopolskie;Kraków;Wincentego Weryhy-Darowskiego;18;1LU;30-198;brak specyfiki;publiczna
+243;275593;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""TEREFERE""";28;2;małopolskie;Kraków;Reduta;28;;31-421;brak specyfiki;niepubliczna
+244;275755;Przedszkole;PRZEDSZKOLE NIEPUBLICZNE JEDYNECZKA;46;3;małopolskie;Kraków;gen. Leopolda Okulickiego;57;137;31-637;brak specyfiki;niepubliczna
+245;275870;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""AKTYWNY MALUSZEK""";23;2;małopolskie;Kraków;ks. Mikołaja Kuczkowskiego;12;14;31-618;brak specyfiki;niepubliczna
+246;276234;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""FASOLLA""";24;2;małopolskie;Kraków;Malwowa;15 LU 1;;30-611;brak specyfiki;niepubliczna
+247;276371;Przedszkole;"""SUNNY BUDDIES"" DWUJĘZYCZNE PRZEDSZKOLE NIEPUBLICZNE";69;4;małopolskie;Kraków;Czerwonego Prądnika;8;U2, U3;31-431;brak specyfiki;niepubliczna
+248;276388;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""ŻÓŁTA PARASOLKA""";76;4;małopolskie;Kraków;Wizjonerów;7;256;31-356;brak specyfiki;niepubliczna
+249;276425;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""POD MAGNOLIĄ"" NR 5 W KRAKOWIE";132;6;małopolskie;Kraków;Osiedle Bohaterów Września;82;;31-621;brak specyfiki;publiczna
+250;276426;Przedszkole;PRZEDSZKOLE NIEPUBLICZNE TRZY JĘZYKI;34;3;małopolskie;Kraków;św. Agnieszki;1;;31-071;brak specyfiki;niepubliczna
+251;276439;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE LALOBA ALEKSANDRA KUBAREK;47;3;małopolskie;Kraków;Alfreda Dauna;113;;30-629;brak specyfiki;niepubliczna
+252;276441;Przedszkole;PUBLICZNE PRZEDSZKOLE CHATKA W KRAKOWIE;32;2;małopolskie;Kraków;Domowa;3;;30-395;brak specyfiki;publiczna
+253;276505;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""HUTNICZEK""";140;7;małopolskie;Kraków;Żaglowa;13 B;;31-979;brak specyfiki;niepubliczna
+254;276525;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""AKADEMIA MAŁYCH EINSTEINÓW - NA SZLAKU CYSTERSKIM""";34;1;małopolskie;Kraków;Osiedle Szklane Domy;7;;31-972;brak specyfiki;niepubliczna
+255;276859;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""POD MAGNOLIĄ"" NR 6 W KRAKOWIE";137;6;małopolskie;Kraków;Osiedle Avia;9;;31-877;brak specyfiki;publiczna
+256;276886;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""POD MAGNOLIĄ"" NR 3 W KRAKOWIE";54;3;małopolskie;Kraków;Osiedle 2 Pułku Lotniczego;47D;;31-870;brak specyfiki;publiczna
+257;276902;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""HAPPY FEET 2"" W KRAKOWIE";42;2;małopolskie;Kraków;Młodzieży;2A;;30-829;brak specyfiki;publiczna
+258;276903;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""RADOSNE SKRZATY""";38;2;małopolskie;Kraków;Józefa Sawy-Calińskiego;13;;31-999;brak specyfiki;niepubliczna
+259;276990;Przedszkole;PIERWSZE KROCZKI PRZEDSZKOLE NIEPUBLICZNE IM. JANUSZA KORCZAKA W KRAKOWIE;31;2;małopolskie;Kraków;Osiedle Dywizjonu 303;19C;LU 1;31-872;brak specyfiki;niepubliczna
+260;277548;Przedszkole;PRZEDSZKOLE NIEPUBLICZNE NR 2 IM. NOBLISTÓW POLSKICH;29;2;małopolskie;Kraków;Henryka Pachońskiego;5M;;31-223;brak specyfiki;niepubliczna
+261;277550;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""U CIOCI JADZI""";43;2;małopolskie;Kraków;Gliniana;14;;30-732;brak specyfiki;niepubliczna
+262;277584;Przedszkole;PRZEDSZKOLE PUBLICZNE WESOŁE SMOKI II W KRAKOWIE;24;1;małopolskie;Kraków;Wrocławska;48;3A;30-011;brak specyfiki;publiczna
+263;277604;Przedszkole;PUBLICZNE PRZEDSZKOLE FAIR PLAY NR 6 W KRAKOWIE;25;2;małopolskie;Kraków;Karola Bunscha;20;77;30-392;brak specyfiki;publiczna
+264;277676;Przedszkole;"DWUJĘZYCZNE PRZEDSZKOLE ""STEP BY STEP""";66;4;małopolskie;Kraków;Ślusarska;9;;30-710;brak specyfiki;niepubliczna
+265;277759;Przedszkole;PUBLICZNE PRZEDSZKOLE FAIR PLAY NR 4 W KRAKOWIE;24;1;małopolskie;Kraków;Klementyny Hoffmanowej;6B;U2;30-419;brak specyfiki;publiczna
+266;277805;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE GROSZKI W KRAKOWIE;50;3;małopolskie;Kraków;Grochowa;26F;;30-731;brak specyfiki;niepubliczna
+267;277850;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE HOPKIDS ACADEMY;26;2;małopolskie;Kraków;Kordiana;50/LU 1-3;;30-653;brak specyfiki;niepubliczna
+268;277954;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE SPORTOWO-JĘZYKOWE FAIR PLAY BRONOWICKA;25;1;małopolskie;Kraków;Bronowicka;138;;30-121;brak specyfiki;niepubliczna
+269;277964;Przedszkole;PUBLICZNE PRZEDSZKOLE MALUTKOWO 2 W KRAKOWIE;79;3;małopolskie;Kraków;Józefa Łepkowskiego;1;LU 1;31-423;brak specyfiki;publiczna
+270;278507;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE TULISIE;12;1;małopolskie;Kraków;Grażyny;18;U1;31-217;brak specyfiki;niepubliczna
+271;278589;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE SPECJALNE ""TIBA 2""";16;4;małopolskie;Kraków;Antoniego Augustynka-Wichury;14;LU 1;30-010;specjalna;niepubliczna
+272;278625;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""BIG BEN""";67;5;małopolskie;Kraków;płk. Ryszarda Kuklińskiego;7;;30-720;brak specyfiki;niepubliczna
+273;278645;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""WAŻKA"" ANNA MEHOFFER-LEWANDOWSKA";62;3;małopolskie;Kraków;Rusznikarska;14 A;22;31-261;brak specyfiki;niepubliczna
+274;278719;Punkt przedszkolny;"NIEPUBLICZNY PUNKT PRZEDSZKOLNY ""OGRODY MUZYKI""";12;1;małopolskie;Kraków;Vlastimila Hofmana;22;;30-210;brak specyfiki;niepubliczna
+275;278813;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE ENCE PENCE;;;małopolskie;Kraków;Profesora Wojciecha Marii Bartla;19B;;30-389;brak specyfiki;niepubliczna
+276;278816;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE AKADEMIA MAŁYCH EINSTEINÓW 2;37;1;małopolskie;Kraków;ks. Józefa Kurzei;2;U4;31-618;brak specyfiki;niepubliczna
+277;278828;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""ULIK""";20;1;małopolskie;Kraków;gen. Ignacego Prądzyńskiego;16;;31-426;brak specyfiki;niepubliczna
+278;278855;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""MOTYL""";28;2;małopolskie;Kraków;Koszykarska;31A;;30-717;brak specyfiki;niepubliczna
+279;278856;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""BUTTERFLY""";16;1;małopolskie;Kraków;Koszykarska;31;;30-717;brak specyfiki;niepubliczna
+280;278865;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE HAPPY TIME 2 W KRAKOWIE;52;3;małopolskie;Kraków;Jugowicka;8A;;30-443;brak specyfiki;niepubliczna
+281;278868;Punkt przedszkolny;"NIEPUBLICZNY PUNKT PRZEDSZKOLNY DLA DZIECI Z NIEPEŁNOSPRAWNOŚCIAMI ""MIKRO""";23;1;małopolskie;Kraków;Dobrego Pasterza;109;;31-416;brak specyfiki;niepubliczna
+282;278902;Przedszkole;PUBLICZNE PRZEDSZKOLE FAIR PLAY NR 2 W KRAKOWIE;88;6;małopolskie;Kraków;Wielicka;28 B;;30-552;brak specyfiki;publiczna
+283;279099;Przedszkole;PUBLICZNE PRZEDSZKOLE NASZA KRAINA W KRAKOWIE;96;4;małopolskie;Kraków;Aleja 29 Listopada;201;LU1;31-241;brak specyfiki;publiczna
+284;279160;Przedszkole;"PRZEDSZKOLE PUBLICZNE ""MALI, ALE WIELCY"" W KRAKOWIE";19;1;małopolskie;Kraków;Władysława Jagiełły;26;;31-711;brak specyfiki;publiczna
+285;279163;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""KRAINA BAJECZNA"" W KRAKOWIE";30;2;małopolskie;Kraków;Sandora Petöfiego;26;;31-712;brak specyfiki;publiczna
+286;279186;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""HAPPY FEET 3"" W KRAKOWIE";106;5;małopolskie;Kraków;Mała Góra;49A;;30-864;brak specyfiki;publiczna
+287;279202;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""HUTA DZIECI""";;;małopolskie;Kraków;Osiedle Urocze;18;;31-954;brak specyfiki;niepubliczna
+288;279246;Przedszkole;PUBLICZNE PRZEDSZKOLE FAIR PLAY NR 3 W KRAKOWIE;112;7;małopolskie;Kraków;prof. Michała Życzkowskiego;20;;31-864;brak specyfiki;publiczna
+289;279308;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""AKADEMIA SMYKA"" W KRAKOWIE";97;4;małopolskie;Kraków;Agatowa;27;;30-798;brak specyfiki;publiczna
+290;478094;Przedszkole;PUBLICZNE PRZEDSZKOLE HAPPY WORLD NR 1 W KRAKOWIE;115;5;małopolskie;Kraków;Agatowa;31;;30-798;brak specyfiki;publiczna
+291;478578;Punkt przedszkolny;"NIEPUBLICZNY PUNKT PRZEDSZKOLNY DLA DZIECI Z NIEPEŁNOSPRAWNOŚCIAMI ""MIKRO P""";14;1;małopolskie;Kraków;Płaszowska;49;;30-713;brak specyfiki;niepubliczna
+292;478811;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE KOLOROWE KREDKI;53;3;małopolskie;Kraków;Stańczyka;8a;LU 1, LU 2;30-126;brak specyfiki;niepubliczna
+293;478844;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""BAJKOLANDIA""";36;2;małopolskie;Kraków;Józefa Sawy-Calińskiego;13;;31-999;brak specyfiki;niepubliczna
+294;478879;Punkt przedszkolny;"NIEPUBLICZNY PUNKT PRZEDSZKOLNY ""U MOZARTA"" W KRAKOWIE";12;1;małopolskie;Kraków;Królowej Jadwigi;227;;30-218;brak specyfiki;niepubliczna
+295;478881;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE „LOGOSENS” Z ODDZIAŁEM INTEGRACYJNYM W KRAKOWIE;42;4;małopolskie;Kraków;Chmieleniec;2B;LU3;30-348;brak specyfiki;niepubliczna
+296;478890;Przedszkole;"NIEPUBLICZNE DWUJĘZYCZNE PRZEDSZKOLE ""MAŁE CUDA"" W KRAKOWIE";74;5;małopolskie;Kraków;Zygmunta Miłkowskiego;7;LU4, LU5;30-349;brak specyfiki;niepubliczna
+297;478923;Przedszkole;NIEPUBLICZNE DWUJĘZYCZNE PRZEDSZKOLE KIDS&CO. 2;59;3;małopolskie;Kraków;Aleja gen. Tadeusza Bora-Komorowskiego;25;;31-476;brak specyfiki;niepubliczna
+298;478949;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE BABY BOOOM W KRAKOWIE;168;11;małopolskie;Kraków;Wielicka;107;LU1;30-552;brak specyfiki;niepubliczna
+299;479150;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE SPORTOWO-JĘZYKOWE KID FAIR PLAY W KRAKOWIE;32;4;małopolskie;Kraków;Henryka Pachońskiego;7a;93-98;31-223;brak specyfiki;niepubliczna
+300;479301;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE WAWEL INTERNATIONAL PRESCHOOL;40;2;małopolskie;Kraków;Leona Wyczółkowskiego;7;;30-118;brak specyfiki;niepubliczna
+301;479302;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE AKADEMIA MALUSZKA;17;1;małopolskie;Kraków;Łużycka;42/45;;30-693;brak specyfiki;niepubliczna
+302;479308;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE EKOLOGICZNE ""GREEN PLACE""";30;2;małopolskie;Kraków;Powstańców;86;U7;31-670;brak specyfiki;niepubliczna
+303;479312;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE FAIR PLAY ALFREDA DAUNA;12;1;małopolskie;Kraków;Alfreda Dauna;70;LU1;30-629;brak specyfiki;niepubliczna
+304;479316;Przedszkole;NIEPUBLICZNE DWUJĘZYCZNE PRZEDSZKOLE KIDS&CO. 3;61;4;małopolskie;Kraków;Zabłocie;43B;;30-701;brak specyfiki;niepubliczna
+305;479321;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE ABC MONTESSORI 1 W KRAKOWIE;25;1;małopolskie;Kraków;Wyżynna;2A;;30-617;brak specyfiki;niepubliczna
+306;479335;Punkt przedszkolny;NIEPUBLICZNY PUNKT PRZEDSZKOLNY SOTIS KRAKÓW I;12;1;małopolskie;Kraków;Beskidzka;23;;30-622;brak specyfiki;niepubliczna
+307;479336;Punkt przedszkolny;NIEPUBLICZNY PUNKT PRZEDSZKOLNY SOTIS KRAKÓW II;11;1;małopolskie;Kraków;Beskidzka;23;;30-622;brak specyfiki;niepubliczna
+308;479337;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE BEBABY;;;małopolskie;Kraków;Edmunda Wasilewskiego;20;;30-305;brak specyfiki;niepubliczna
+309;479342;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE HOPKIDS NR 4;;;małopolskie;Kraków;Na Zakolu Wisły;12d;Lu2;30-729;brak specyfiki;niepubliczna
+310;479437;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE KINDERLOVE W KRAKOWIE;22;2;małopolskie;Kraków;Potrzask;65;;30-898;brak specyfiki;niepubliczna
+311;479692;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""WESOŁA CIUCHCIA"" NR 2 W KRAKOWIE";62;3;małopolskie;Kraków;Mogilska;120E;LU1;31-445;brak specyfiki;publiczna
+312;479942;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""AKADEMIA JASIA I MAŁGOSI"" W KRAKOWIE";58;4;małopolskie;Kraków;Drukarska;5B;;30-348;brak specyfiki;publiczna
+313;480131;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""KRAKOWIACZEK 2"" W KRAKOWIE";20;2;małopolskie;Kraków;Prądnicka;74;;31-202;brak specyfiki;niepubliczna
+314;480156;Przedszkole;"PUBLICZNE PRZEDSZKOLE Z ODDZIAŁAMI INTEGRACYJNYMI ""MAJOWY ZAKĄTEK"" W KRAKOWIE";70;4;małopolskie;Kraków;Zawiła;65e;;30-390;brak specyfiki;publiczna
+315;480340;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""AKADEMIA ELFÓW"" 2 W KRAKOWIE";73;4;małopolskie;Kraków;Wincentego Danka;8;LU1, LU2;31-229;brak specyfiki;publiczna
+316;480494;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""MALI ARTYŚCI"" NR 1 W KRAKOWIE";37;2;małopolskie;Kraków;Kordiana;50B;LU1;30-653;brak specyfiki;publiczna
+317;480497;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""MALI ARTYŚCI"" NR 2 W KRAKOWIE";49;2;małopolskie;Kraków;Republiki Korczakowskiej;3;1;30-867;brak specyfiki;publiczna
+318;480549;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""DZIECIĘCY ZAKĄTEK""";14;1;małopolskie;Kraków;Podlesie;5;37;30-667;brak specyfiki;niepubliczna
+319;480775;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""NA KOZIE""";20;2;małopolskie;Kraków;Kozienicka;17;;30-397;brak specyfiki;niepubliczna
+320;480785;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE KIDS ACADEMY W KRAKOWIE;75;3;małopolskie;Kraków;Sołtysowska;3/LU1;;31-589;brak specyfiki;niepubliczna
+321;480788;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE LITTLE BEES W KRAKOWIE;14;1;małopolskie;Kraków;Pszczelna;35;;30-385;brak specyfiki;niepubliczna
+322;481079;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE „WESOŁE DZIECIAKI”;15;1;małopolskie;Kraków;Leona Petrażyckiego;42;;30-399;brak specyfiki;niepubliczna
+323;481192;Przedszkole;"PRZEDSZKOLE NIEPUBLICZNE ""WE LOVE KIDS"" W KRAKOWIE";25;1;małopolskie;Kraków;Urocza;36;;30-602;brak specyfiki;niepubliczna
+324;481193;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE OGRÓD EMPATII W KRAKOWIE;19;2;małopolskie;Kraków;Królowej Jadwigi;248;;30-218;brak specyfiki;niepubliczna
+325;481198;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""MALI GIGANCI"" W KRAKOWIE";10;1;małopolskie;Kraków;Tytusa Czyżewskiego;3;LU4;30-085;brak specyfiki;niepubliczna
+326;481200;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""KIDSMILE"" W KRAKOWIE";;;małopolskie;Kraków;Pana Tadeusza;4;;30-727;brak specyfiki;niepubliczna
+327;481202;Przedszkole;"NIEPUBLICZNE DWUJĘZYCZNE PRZEDSZKOLE ""SUNFLOWER"" W KRAKOWIE";19;1;małopolskie;Kraków;Galicyjska;1;;31-586;brak specyfiki;niepubliczna
+328;481224;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE RÓŻANY OGRÓDEK;11;1;małopolskie;Kraków;Stańczyka;8c;LU2;30-126;brak specyfiki;niepubliczna
+329;481620;Przedszkole;"PUBLICZNE PRZEDSZKOLE ""BAJKA 1"" W KRAKOWIE";73;3;małopolskie;Kraków;Henryka i Karola Czeczów;50;;30-798;brak specyfiki;publiczna
+330;481922;Przedszkole;PRZEDSZKOLE PUBLICZNE MOTYLEK W KRAKOWIE;50;2;małopolskie;Kraków;Bociana;6a;3;31-231;brak specyfiki;publiczna
+331;481941;Przedszkole;PRZEDSZKOLE PUBLICZNE TUPTUSIOWO 2 W KRAKOWIE;;;małopolskie;Kraków;Pawła z Krosna;5;;30-389;brak specyfiki;publiczna
+332;481963;Przedszkole;PUBLICZNE PRZEDSZKOLE HAPPY KIDS NR 2 W KRAKOWIE;57;4;małopolskie;Kraków;Stanisława Stojałowskiego;6;4;30-611;brak specyfiki;publiczna
+333;481964;Przedszkole;PUBLICZNE PRZEDSZKOLE HAPPY KIDS NR 3 W KRAKOWIE;59;4;małopolskie;Kraków;dr. Jana Piltza;41;1;30-392;brak specyfiki;publiczna
+334;481965;Przedszkole;PUBLICZNE PRZEDSZKOLE HAPPY KIDS NR 4 W KRAKOWIE;44;3;małopolskie;Kraków;dr. Jana Piltza;43;2;30-392;brak specyfiki;publiczna
+335;481966;Przedszkole;PUBLICZNE PRZEDSZKOLE HAPPY KIDS NR 5 W KRAKOWIE;100;5;małopolskie;Kraków;Stanisława Lema;24;2;31-571;brak specyfiki;publiczna
+336;482129;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE KIDDIE CITY;30;2;małopolskie;Kraków;Opolska;112;;31-323;brak specyfiki;niepubliczna
+337;482134;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE EKSPEDYCYJNE ""COMPASS"" W KRAKOWIE";23;1;małopolskie;Kraków;Malborska;35;;30-646;brak specyfiki;niepubliczna
+338;482199;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE MAŁA FINLANDIA W KRAKOWIE;19;1;małopolskie;Kraków;Władysława Łokietka;194;;31-334;brak specyfiki;niepubliczna
+339;482259;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE MAPLE BEAR W KRAKOWIE;28;3;małopolskie;Kraków;Saska;25D;;30-720;brak specyfiki;niepubliczna
+340;482413;Punkt przedszkolny;NIEPUBLICZNY PUNKT PRZEDSZKOLNY WIOSKA KRASNOLUDKÓW;15;1;małopolskie;Kraków;Krzysztofa Kamila Baczyńskiego;18;;30-396;brak specyfiki;niepubliczna
+341;482419;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE SENSOMOWA;3;1;małopolskie;Kraków;Strumienna;26;;30-609;brak specyfiki;niepubliczna
+342;482425;Przedszkole;PRZEDSZKOLE NIEPUBLICZNE PLUSZOWY MIŚ II;1;1;małopolskie;Kraków;Ruczaj;43;U4;30-406;brak specyfiki;niepubliczna
+343;482485;Przedszkole;"NIEPUBLICZNE PRZEDSZKOLE ""ZIELONA WIEŻA KRAKÓW""";3;1;małopolskie;Kraków;Kobierzyńska;205A;;30-382;brak specyfiki;niepubliczna
+344;482685;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE HELLO KIDS W KRAKOWIE;11;2;małopolskie;Kraków;Grzegórzecka;69C;LU1;31-559;brak specyfiki;niepubliczna
+345;482786;Przedszkole;PRZEDSZKOLE NIEPUBLICZNE WIOSKA SŁONECZNA KRAINA;;;małopolskie;Kraków;Kłuszyńska;14;;30-499;brak specyfiki;niepubliczna
+346;482858;Przedszkole;"NIEPUBLICZNE DWUJĘZYCZNE PRZEDSZKOLE ""SUNFLOWER"" 2 W KRAKOWIE";;;małopolskie;Kraków;Józefa Wybickiego;5A;LU1;31-261;brak specyfiki;niepubliczna
+347;482860;Przedszkole;DWUJĘZYCZNE NIEPUBLICZNE PRZEDSZKOLE SUNNY BUDDIES PODGÓRZE;;;małopolskie;Kraków;Walerego Sławka;9;U1;30-633;brak specyfiki;niepubliczna
+348;482864;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE DINUSIOWO;;;małopolskie;Kraków;Stanisława Lema;17;U1;31-571;brak specyfiki;niepubliczna
+349;482871;Przedszkole;NIEPUBLICZNE PRZEDSZKOLE MINI SMOKI;;;małopolskie;Kraków;Osiedle Kombatantów;9;;31-630;brak specyfiki;niepubliczna
