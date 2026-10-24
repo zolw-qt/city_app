@@ -111,6 +111,12 @@ def load_demographic_data():
     )
     df = pd.read_csv(file_path, sep=";")
 
+    # st.subheader("Podgląd danych")
+    # st.write(df.head())
+
+    # st.subheader("Podsumowanie danych")
+    # st.write(df.describe())
+
     # Oczyszczenie nazw kolumn
     df.columns = df.columns.str.strip()
 
