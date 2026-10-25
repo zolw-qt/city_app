@@ -55,7 +55,9 @@ KOLORY = {
 
 
 st.markdown(
-    f"<h1>{ICON_DEMO} Statystyki i Analiza Demograficzna</h1>", unsafe_allow_html=True
+    f"<h1>{ICON_DEMO} Statystyki i Analiza Demograficzna</h1>",
+    unsafe_allow_html=True,
+    anchors=False,
 )
 st.caption(
     "Interaktywna analiza zmian liczby mieszkańców oraz struktury edukacyjnej w Krakowie."
@@ -106,11 +108,15 @@ ETYKIETY_GRUP = {
 }
 
 with st.form("filters_form"):
-    st.markdown(f"### {ICON_SLIDERS} Panel Filtrowania Danych", unsafe_allow_html=True)
+    st.markdown(
+        f"### {ICON_SLIDERS} Panel Filtrowania Danych",
+        unsafe_allow_html=True,
+        anchors=False,
+    )
     st.caption(
         "Domyślnie widzisz wszystkie dane. Zaznacz opcje poniżej, aby zawęzić analizę."
     )
-    col_f1, col_f2, col_f3 = st.columns([1.3, 1, 1])
+    col_f1, col_f2 = st.columns([1.3, 1])
 
     with col_f1:
         selected_years = st.slider(
@@ -132,21 +138,11 @@ with st.form("filters_form"):
             help="Dotyczy wykresu struktury wieku. Puste pole oznacza wszystkie grupy.",
         )
 
-    with col_f3:
-        selected_kg_types = st.multiselect(
-            "Typ przedszkoli:",
-            options=["Samorządowe", "Niesamorządowe"],
-            default=[],
-            placeholder="Wszystkie typy",
-            help="Dotyczy wykresu dzieci w przedszkolach. Puste pole oznacza oba typy.",
-        )
-
     submit_button = st.form_submit_button("Zastosuj filtry", type="primary")
 
 # Puste pole = brak zawężenia (reszta kodu działa jak wcześniej)
 if not selected_age_groups:
     selected_age_groups = WSZYSTKIE_GRUPY
-kindergarten_type = selected_kg_types[0] if len(selected_kg_types) == 1 else "Wszystkie"
 
 # Filtrowanie ramki danych po wybranym zakresie lat
 df_filtered = df_raw[
@@ -161,6 +157,7 @@ st.markdown("---")
 st.markdown(
     f"## {ICON_DATABASE} Podgląd danych demograficznych",
     unsafe_allow_html=True,
+    anchors=False,
 )
 st.write(
     "Jeżeli interesuje cię zapoznanie się z surowymi danymi, to możesz je przejrzeć rozwijając poniższą opcję."
@@ -215,7 +212,9 @@ def create_sparkline(df, y_col, is_bar=False, reverse_color=False):
 # =========================================================
 # NAGŁÓWEK I OPIS WPROWADZAJĄCY NAD KARTAMI SPARK LINES
 # =========================================================
-st.markdown(f"## {ICON_NUMBERS} Kraków w liczbach", unsafe_allow_html=True)
+st.markdown(
+    f"## {ICON_NUMBERS} Kraków w liczbach", unsafe_allow_html=True, anchors=False
+)
 
 st.markdown(
     f"""
@@ -225,9 +224,10 @@ Służy do szybkiej oceny dynamiki wzrostu populacji, ruchów migracyjnych, licz
 **Analizowany okres:** {selected_years[0]} – {selected_years[1]}
 """,
     unsafe_allow_html=True,
+    anchors=False,
 )
 
-st.markdown("<br>", unsafe_allow_html=True)
+st.markdown("<br>", unsafe_allow_html=True, anchors=False)
 
 # =========================================================
 # 4 KARTY SPARKLINE (Z PRAWDZIWYMI DANYMI)
@@ -273,6 +273,7 @@ def kpi_card(col, label, column, fmt_value, delta="pct", is_bar=False, help_txt=
                 f"color:{fg};padding:3px 10px;border-radius:999px;font-size:14px;"
                 f'font-weight:600;">{arrow} {delta_txt}</span></div>',
                 unsafe_allow_html=True,
+                anchors=False,
             )
             st.plotly_chart(
                 fig, use_container_width=True, config={"displayModeBar": False}
@@ -407,7 +408,9 @@ def load_preschool_data():
 # =========================================================
 # 1. KTO SIĘ TU WPROWADZA?
 # =========================================================
-st.markdown(f"## {ICON_DETECTIVE} Kto się tu wprowadza?", unsafe_allow_html=True)
+st.markdown(
+    f"## {ICON_DETECTIVE} Kto się tu wprowadza?", unsafe_allow_html=True, anchors=False
+)
 
 nat_suma = df_plot["Przyrost naturalny"].sum()
 mig_suma = df_plot["Saldo migracji"].sum()
@@ -435,7 +438,7 @@ st.markdown(
 col_a, col_b = st.columns(2)
 
 with col_a:
-    st.markdown("##### Skąd bierze się wzrost liczby mieszkańców?")
+    st.markdown("##### Skąd bierze się wzrost liczby mieszkańców?", anchors=False)
     fig = px.bar(
         df_plot,
         x="Rok",
@@ -447,7 +450,7 @@ with col_a:
     st.plotly_chart(styl(fig, "Osoby"), use_container_width=True)
 
 with col_b:
-    st.markdown("##### Przeprowadzki z Polski i z zagranicy")
+    st.markdown("##### Przeprowadzki z Polski i z zagranicy", anchors=False)
     fig = px.bar(
         df_plot,
         x="Rok",
@@ -481,7 +484,7 @@ st.markdown("---")
 # =========================================================
 # 2. KTO TU MIESZKA?
 # =========================================================
-st.markdown(f"## {ICON_HOUSE} Kto tu mieszka?", unsafe_allow_html=True)
+st.markdown(f"## {ICON_HOUSE} Kto tu mieszka?", unsafe_allow_html=True, anchors=False)
 
 wiek_kol = ["Przedprodukcyjny", "Produkcyjny", "Poprodukcyjny"]
 udzialy = df_plot[wiek_kol].div(df_plot[wiek_kol].sum(axis=1), axis=0) * 100
@@ -493,7 +496,8 @@ st.markdown(
     f"udział osób w wieku produkcyjnym z **{proc(p0['Produkcyjny'])}** do "
     f"**{proc(p1['Produkcyjny'])}**, a seniorów z **{proc(p0['Poprodukcyjny'])}** do "
     f"**{proc(p1['Poprodukcyjny'])}**. Poniższy wykres pozwala jasno ocenić to, czy Kraków to miasto młodych, "
-    "czy raczej starzejące się."
+    "czy raczej starzejące się.",
+    anchors=False,
 )
 
 grupy = [g for g in wiek_kol if g in selected_age_groups]
@@ -521,7 +525,7 @@ st.markdown("---")
 # =========================================================
 # 3. RODZINY Z DZIEĆMI
 # =========================================================
-st.markdown(f"## {ICON_BABY} Rodziny z dziećmi", unsafe_allow_html=True)
+st.markdown(f"## {ICON_BABY} Rodziny z dziećmi", unsafe_allow_html=True, anchors=False)
 
 idx_max = df_plot["Urodzenia"].idxmax()
 rok_szczyt = int(df_plot.loc[idx_max, "Rok"])
@@ -537,10 +541,30 @@ st.markdown(
     "więc to one wyznaczają zapotrzebowanie na miejsca w kolejnych latach."
 )
 
+with st.form("kindergarten_filters_form"):
+    st.markdown(
+        f"#### {ICON_SLIDERS} Panel Filtrowania Przedszkoli",
+        unsafe_allow_html=True,
+        anchors=False,
+    )
+    st.caption(
+        "Domyślnie widzisz wszystkie dane. Zaznacz opcje poniżej, aby zawęzić analizę."
+    )
+    selected_kg_types = st.multiselect(
+        "Typ przedszkoli:",
+        options=["Samorządowe", "Niesamorządowe"],
+        default=[],
+        placeholder="Wszystkie typy",
+        help="Dotyczy wykresu dzieci w przedszkolach. Puste pole oznacza oba typy.",
+    )
+    st.form_submit_button("Zastosuj filtr", type="primary")
+
+kindergarten_type = selected_kg_types[0] if len(selected_kg_types) == 1 else "Wszystkie"
+
 col_c, col_d = st.columns(2)
 
 with col_c:
-    st.markdown("##### Urodzenia w Krakowie")
+    st.markdown("##### Urodzenia w Krakowie", anchors=False)
     fig = px.bar(
         df_plot,
         x="Rok",
@@ -552,7 +576,7 @@ with col_c:
 
 podsumowanie_przedszkoli = None
 with col_d:
-    st.markdown("##### Dzieci w przedszkolach")
+    st.markdown("##### Dzieci w przedszkolach", anchors=False)
     df_prz = load_preschool_data()
     if df_prz.empty:
         st.warning("Nie znaleziono plików z danymi o przedszkolach w folderze data/.")
@@ -613,6 +637,7 @@ st.markdown("---")
 st.markdown(
     f"## {ICON_USERSWITCH} Jak zmieniają się gospodarstwa domowe?",
     unsafe_allow_html=True,
+    anchors=False,
 )
 
 roz_start = df_plot["Rozwody"].iloc[0] / df_plot["Małżeństwa"].iloc[0] * 100
@@ -626,7 +651,7 @@ if roz_koniec > roz_start:
     st.caption(
         "Interpretacja: więcej rozstań i osób mieszkających samodzielnie zwykle "
         "oznacza większy popyt na mniejsze mieszkania. Zbiór nie zawiera jednak danych "
-        "o gospodarstwach domowych, <u>zatem jest to raczej hipoteza, a nie czysty wynik odczytany z danych</u>.",
+        "o gospodarstwach domowych, <u>zatem jest to raczej hipoteza, a nie wynik odczytany z danych</u>.",
         unsafe_allow_html=True,
     )
 
@@ -648,6 +673,7 @@ st.markdown("---")
 st.markdown(
     f"## {ICON_QUESTION} Co to oznacza przy szukaniu mieszkania?",
     unsafe_allow_html=True,
+    anchors=False,
 )
 
 if mig_suma > 0:

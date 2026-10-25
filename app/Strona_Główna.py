@@ -22,7 +22,11 @@ ICON_MAP = '<svg class="ph-icon" width="22" height="22" viewBox="0 0 256 256"><p
 ICON_DEMO = '<svg class="ph-icon" width="22" height="22" viewBox="0 0 256 256"><path d="M232,208a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V48a8,8,0,0,1,16,0V192H224A8,8,0,0,1,232,208ZM96,128a8,8,0,0,1-2.34,5.66l-32,32a8,8,0,0,1-11.32-11.32L80,123.31l-26.34-26.35a8,8,0,0,1,11.32-11.32L93.66,114.34A8,8,0,0,1,96,128Zm125.66-37.66a8,8,0,0,1,0,11.32l-64,64a8,8,0,0,1-11.32,0L112,131.31l-10.34,10.35a8,8,0,0,1-11.32-11.32l16-16a8,8,0,0,1,11.32,0L160,146.69l57.66-57.65A8,8,0,0,1,221.66,90.34Z"></path></svg>'
 
 # Nagłówek główny
-st.markdown(f"<h1>{ICON_BUILDINGS} Kraków Open Data App</h1>", unsafe_allow_html=True)
+st.markdown(
+    f"<h1>{ICON_BUILDINGS} Kraków Open Data App</h1>",
+    unsafe_allow_html=True,
+    anchors=False,
+)
 st.caption(
     "Prototyp interaktywnej platformy analitycznej wykorzystującej otwarte dane miejskie Krakowa."
 )
@@ -33,7 +37,9 @@ st.markdown("---")
 col_desc, col_info = st.columns([2, 1])
 
 with col_desc:
-    st.markdown(f"### {ICON_TARGET} Cel i Wizja Projektu", unsafe_allow_html=True)
+    st.markdown(
+        f"### {ICON_TARGET} Cel i Wizja Projektu", unsafe_allow_html=True, anchors=False
+    )
     st.write("""
     Aplikacja powstała w ramach inicjatywy **Kraków Open Data App**. Jej celem jest ułatwienie osobom 
     szukającym mieszkania na wynajem, a szczególnie młodym osobom i rodzinom, oceny jakości życia i dostępności 
@@ -52,14 +58,20 @@ with col_info:
 st.markdown("---")
 
 # Sekcja nawigacji po modułach
-st.markdown(f"### {ICON_MODULES} Dostępne Moduły Aplikacji", unsafe_allow_html=True)
+st.markdown(
+    f"### {ICON_MODULES} Dostępne Moduły Aplikacji",
+    unsafe_allow_html=True,
+    anchors=False,
+)
 
 col1, col2 = st.columns(2)
 
 with col1:
     with st.container(border=True):
         st.markdown(
-            f"### {ICON_MAP} Mapa Miasta i Infrastruktura", unsafe_allow_html=True
+            f"### {ICON_MAP} Mapa Miasta i Infrastruktura",
+            unsafe_allow_html=True,
+            anchors=False,
         )
         st.write("Interaktywna mapa Krakowa z warstwami heatmap.")
         st.markdown(
@@ -71,6 +83,7 @@ with col2:
         st.markdown(
             f"### {ICON_DEMO} Statystyki i Analiza Demograficzna",
             unsafe_allow_html=True,
+            anchors=False,
         )
         st.write("Szczegółowa analiza danych demograficznych mieszkańców Krakowa.")
         st.markdown(

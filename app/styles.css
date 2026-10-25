@@ -95,6 +95,7 @@
         padding: 1.25rem 1.5rem;
     }
     div[data-testid="stForm"] h3,
+    div[data-testid="stForm"] h4,
     div[data-testid="stForm"] label p,
     div[data-testid="stForm"] [data-testid="stWidgetLabel"] p,
     div[data-testid="stForm"] [data-testid="stCaptionContainer"],
