@@ -1,6 +1,15 @@
 import streamlit as st
 from styles import inject_css
 
+from streamlit_extras.let_it_rain import *
+
+rain(
+    emoji="📈",
+    font_size=54,
+    falling_speed=5,
+    animation_length="3s",
+)
+
 # Konfiguracja strony
 st.set_page_config(
     page_title="Open Data App - Kraków", layout="wide", initial_sidebar_state="expanded"
@@ -41,10 +50,15 @@ with col_desc:
         f"### {ICON_TARGET} Cel i Wizja Projektu", unsafe_allow_html=True, anchors=False
     )
     st.write("""
-    Aplikacja powstała w ramach inicjatywy **Kraków Open Data App**. Jej celem jest ułatwienie osobom 
-    szukającym mieszkania na wynajem, a szczególnie młodym osobom i rodzinom, oceny jakości życia i dostępności 
-    infrastruktury miejskiej w poszczególnych rejonach Krakowa.
+    Prototyp aplikacji powstał w ramach konkursu **Kraków Open Data App**.\n
+    Celem aplikacji jest zainteresowanie użytkowników otwartymi danymi i zachęcić do własnej zabawy i analizy
+    oraz ułatwić porównywanie dzielnic Krakowa osobom szukającym mieszkania na wynajem, pod względem dostępności infrastruktury miejskiej.
+    W przyszłości aplikacja może zostać uzupełniona o dane takie jak szkoły podstawowe, szkoły ponadpodstawowe oraz inne elmenty miasta.
     """)
+
+    # Prototyp aplik jest ułatwienie osobom 
+    # szukającym mieszkania na wynajem, a szczególnie młodym osobom i rodzinom, oceny jakości życia i dostępności 
+    # infrastruktury miejskiej w poszczególnych rejonach Krakowa.
 
 with col_info:
     st.info("""
