@@ -8,6 +8,7 @@ import streamlit as st
 from folium.plugins import FastMarkerCluster, HeatMap
 from streamlit_folium import st_folium
 from styles import inject_css
+from streamlit_extras.stoggle import *
 
 from address_search import (
     find_nearest,
@@ -529,4 +530,17 @@ st.caption(
     f"Na mapie pokazano {len(stops):,} lokalizacji przystanków, {len(preschools):,} lokalizacji przedszkoli. "
     "Punkty opisują miejsca przystanków; dostępne dane nie pokazują przebiegu tras "
     "ani częstotliwości kursowania."
+)
+
+stoggle(
+    "Czym jest heatmapa?",
+    """Heatmapa (mapa cieplna) to graficzny sposób przedstawienia danych za pomocą kolorów. 
+    Ciepłe kolory to miejsca "gorące" tam gdzie punktów jest najwięcej, a zimne kolory, takie jak niebieski i zielony to miejsca gdzie punktów jest mniej.
+    Spróbuj włączyć "Zagęszczenie przystanków" na mapie, aby ją zobaczyć.""",
+)
+
+stoggle(
+    "Jak liczona jest odległość do najbliższych punktów?",
+    """Dla uproszczenia odległość jest liczona w linii prostej. Wpisany adres jest zamieniany
+    na współrzędne i liczona jest odległość od wszystkich punktów na mapie. Najmniejsza wartość to najbliższy punkt.""",
 )
