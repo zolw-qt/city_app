@@ -13,7 +13,7 @@ from shapely.strtree import STRtree
 from folium.plugins import FastMarkerCluster, HeatMap
 from streamlit_folium import st_folium
 from styles import inject_css
-from streamlit_extras.stoggle import *
+from streamlit_extras.stoggle import stoggle
 
 from address_search import (
     find_nearest,
@@ -625,20 +625,16 @@ if search_result:
             nearest_preschool["name"] = str(nearest_preschool["name"]).strip().title()
             st.markdown("**Najbliższe przedszkole**")
             st.markdown(
-            f'<div style="font-size: 1.1rem; line-height: 1.35; '
-            f'white-space: normal; overflow-wrap: anywhere;">'
-            f'{escape(nearest_preschool["name"])}</div>',
-            unsafe_allow_html=True,
-        )
-            st.metric(
-            "",
-            "",
-            format_distance(nearest_preschool["distance_m"]),
+                f'<div style="font-size: 1.1rem; line-height: 1.35; '
+                f'white-space: normal; overflow-wrap: anywhere;">'
+                f'{escape(nearest_preschool["name"])}</div>',
+                unsafe_allow_html=True,
             )
-            # st.caption(
-            #     f"Odległość w linii prostej: "
-            #     f"{format_distance(nearest_preschool['distance_m'])}"
-            #     )
+            st.metric(
+                "Odległość w linii prostej",
+                "",
+                format_distance(nearest_preschool["distance_m"]),
+            )
         else:
             st.info("Brak danych o przedszkolach.")
 
@@ -917,11 +913,6 @@ st.markdown(
     """
     <style>
     .stop-marker-icon { background: transparent; border: 0; }
-    .stop-marker-dot {
-        display: block; width: 10px; height: 10px;
-        border: 1px solid #34205F; border-radius: 50%;
-        background: #4B2E83; opacity: 0.9;
-    }
     </style>
     """,
     unsafe_allow_html=True,

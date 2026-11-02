@@ -6,12 +6,6 @@ st.set_page_config(
     page_title="Open Data App - Kraków", layout="wide", initial_sidebar_state="expanded"
 )
 
-# Style CSS paska bocznego oraz przycisku zwijania
-st.set_page_config(
-    page_title="Statystyki i Analiza Demograficzna",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
 inject_css()
 
 # Definicje wektorów SVG dla ikon z Phosphor Icons
@@ -76,7 +70,10 @@ with col1:
             unsafe_allow_html=True,
             anchors=False,
         )
-        st.write("Interaktywna mapa Krakowa z warstwami heatmap.")
+        st.write(
+            "Interaktywna mapa Krakowa z punktami, heatmapami, heksagonami i "
+            "diagramami Voronoi dla przystanków oraz przedszkoli."
+        )
         st.markdown(
             "*Przejdź do zakładki **Mapa Miasta i Infrastruktura** w panelu bocznym.*"
         )

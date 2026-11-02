@@ -14,12 +14,6 @@ st.set_page_config(
 )
 
 
-# Style CSS paska bocznego oraz przycisku zwijania
-st.set_page_config(
-    page_title="Statystyki i Analiza Demograficzna",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
 inject_css()
 
 
@@ -71,14 +65,12 @@ st.markdown("---")
 # =========================================================
 @st.cache_data
 def load_demographic_data():
-    file_path = "data/Zbiorcze statystyki demograficzne dla Krakowa, od 1995 roku.csv"
+    file_path = (
+        Path(__file__).resolve().parents[2]
+        / "data"
+        / "Zbiorcze statystyki demograficzne dla Krakowa, od 1995 roku.csv"
+    )
     df = pd.read_csv(file_path, sep=";")
-
-    # st.subheader("Podgląd danych")
-    # st.write(df.head())
-
-    # st.subheader("Podsumowanie danych")
-    # st.write(df.describe())
 
     # Oczyszczenie nazw kolumn
     df.columns = df.columns.str.strip()
@@ -138,7 +130,7 @@ with st.form("filters_form"):
             help="Dotyczy wykresu struktury wieku. Puste pole oznacza wszystkie grupy.",
         )
 
-    submit_button = st.form_submit_button("Zastosuj filtry", type="primary")
+    st.form_submit_button("Zastosuj filtry", type="primary")
 
 # Puste pole = brak zawężenia (reszta kodu działa jak wcześniej)
 if not selected_age_groups:
@@ -162,32 +154,21 @@ st.markdown(
 st.write(
     "Jeżeli interesuje cię zapoznanie się z surowymi danymi, to możesz je przejrzeć rozwijając poniższą opcję."
 )
-# df_podglad = load_demographic_data()
-# st.write(df_podglad.head(7))
 with st.expander("Zobacz dane", expanded=False):
     st.dataframe(df_raw, use_container_width=True)
 
 st.markdown("---")
 
 
-# st.markdown(
-#     "### Podsumowanie danych - pytanie czy to chcemy i czy moze na koncu lepiej?"
-# )
-# st.write(df_podglad.describe())
-
-
 # =========================================================
 # FUNKCJA GENERUJĄCA MINIWYKRESY (SPARK LINES)
 # =========================================================
-def create_sparkline(df, y_col, is_bar=False, reverse_color=False):
+def create_sparkline(df, y_col, is_bar=False):
     start_val = df[y_col].iloc[0]
     end_val = df[y_col].iloc[-1]
     is_growth = end_val >= start_val
 
-    if reverse_color:
-        color = "#ef4444" if is_growth else "#10b981"
-    else:
-        color = "#10b981" if is_growth else "#ef4444"
+    color = "#10b981" if is_growth else "#ef4444"
 
     if is_bar:
         fig = px.bar(df, x="Rok", y=y_col)
@@ -706,22 +687,3 @@ st.info(
     "i przedszkola przy konkretnej lokalizacji w zakładce **Mapa Miasta i Infrastruktura**."
 )
 
-# srednia_mig = df_plot["Saldo migracji"].mean()
-# punkty = []
-# if pd.notna(srednia_mig):
-#     punkty.append(
-#         f"**Konkurencja o mieszkania:** średnie roczne saldo migracji w latach "
-#         f"{rok_od}–{rok_do} to **{fmt_signed(srednia_mig)}** osób."
-#     )
-# punkty.append(
-#     f"**Rodziny z dziećmi:** liczba urodzeń w {rok_do} r. to {fmt_int(urodz_koniec)} "
-#     f"({proc(zmiana_od_szczytu, znak=True)} względem roku {rok_szczyt})."
-# )
-# if podsumowanie_przedszkoli:
-#     punkty.append(f"**Przedszkola:** {podsumowanie_przedszkoli}")
-# st.markdown("\n".join(f"- {p}" for p in punkty))
-
-# st.info(
-#     "Sprawdź, jak wygląda dostępność przystanków i przedszkoli w wybranej okolicy: "
-#     "otwórz zakładkę **Mapa Miasta i Infrastruktura** w menu bocznym."
-# )

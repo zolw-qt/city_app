@@ -1,0 +1,104 @@
+DOKUMENTACJA TECHNICZNA
+Kraków Open Data — infrastruktura i demografia
+
+1. CHARAKTERYSTYKA
+
+Aplikacja webowa uruchamiana lokalnie przez Streamlit. Składa się ze strony głównej, interaktywnej mapy oraz strony analizy demograficznej. Dane wejściowe są przechowywane jako pliki CSV w katalogu data/. Aplikacja nie używa bazy danych.
+
+2. TECHNOLOGIE
+
+- Python — logika aplikacji.
+- Streamlit — interfejs, strony, formularze, filtry i stan sesji.
+- Pandas — wczytywanie, czyszczenie, filtrowanie i łączenie tabel CSV.
+- Plotly — wykresy interaktywne.
+- GeoPandas — dane geoprzestrzenne i transformacje układów współrzędnych.
+- Folium — mapa Leaflet i warstwy mapowe.
+- streamlit-folium — osadzanie mapy Folium w Streamlit.
+- Shapely — geometrie punktów, siatki heksagonalnej i diagramu Voronoi.
+- GeoPy — geokodowanie przez Nominatim oraz ograniczanie częstotliwości zapytań.
+- streamlit-extras — komponent stoggle do rozwijanych opisów.
+
+Zależności są wymienione w requirements.txt. Plik nie przypina wersji pakietów.
+
+3. DANE WEJŚCIOWE
+
+Wszystkie wymienione niżej pliki znajdują się w katalogu data/.
+
+Mapa:
+- Przystanki_Komunikacji_Miejskiej_w_Krakowie.csv — kolumny współrzędnych x i y w EPSG:3857; kolumny opisowe obejmują nazwę oraz rodzaj przystanku.
+- przedszkola_wspolrzedne.csv — współrzędne w kolumnach longitiude i latitude; loader akceptuje również longitude. Nazwa placówki jest pobierana z kolumny „Nazwa szkoły_placówki”.
+
+Demografia:
+- Zbiorcze statystyki demograficzne dla Krakowa, od 1995 roku.csv — miejskie szeregi czasowe, między innymi ludność, grupy wieku, urodzenia, zgony i migracje. Plik jest odczytywany z separatorem średnika.
+- Przedszkola samorządowe w roku 2023-2024 - liczba dzieci i oddziałów.csv
+- Przedszkola samorządowe w roku 2024-2025 - liczba dzieci i oddziałów.csv
+- Przedszkola samorządowe w roku 2025-2026 - liczba dzieci i oddziałów.csv
+- Przedszkola niesamorządowe w roku 2023-2024 - liczba dzieci i oddziałów.csv
+- Przedszkola niesamorządowe w roku 2024-2025 - liczba dzieci i oddziałów.csv
+
+Pliki o przedszkolach są łączone w tabelę z kolumnami typu placówki, roku szkolnego, numeru RSPO, liczby dzieci i liczby oddziałów. Niektóre aliasy nazw kolumn są normalizowane. Jeśli pliku brakuje, loader go pomija; wyniki mogą być wtedy niepełne. Statystyki demograficzne dotyczą całego Krakowa, nie dzielnic.
+
+Odnośniki do zbiorów wskazane w interfejsie:
+- Statystyki demograficzne: https://otwartedane.um.krakow.pl/zbiory-danych/krakow-statystyki-demograficzne
+- Przedszkola — liczba dzieci: https://otwartedane.um.krakow.pl/zbiory-danych/przedszkola-w-krakowie-liczba-dzieci
+- Komunikacja miejska — KMK: https://otwartedane.um.krakow.pl/zbiory-danych/komunikacja-miejska-w-krakowie-kmk
+
+4. PRZETWARZANIE PRZESTRZENNE
+
+- Współrzędne przystanków są wczytywane jako EPSG:3857 i konwertowane do EPSG:4326 na potrzeby mapy.
+- Współrzędne przedszkoli są wczytywane jako długość i szerokość geograficzna w EPSG:4326; wartości spoza zakresu współrzędnych geograficznych są odrzucane.
+- Obliczenia odległości, heksagonów i Voronoi wykonuje się w EPSG:2180.
+- Odległość od adresu do najbliższego punktu jest odległością euklidesową w metrach, w linii prostej.
+- Heksagony mają promień 350 m; tooltip zawiera liczbę punktów danego rodzaju w komórce.
+- Voronoi przypisuje obszar do najbliższej lokalizacji w linii prostej. Komórki są przycinane do prostokątnego zasięgu wyznaczonego z danych.
+- Heatmapa obrazuje zagęszczenie lokalizacji punktowych. Nie przedstawia liczby miejsc w placówkach ani częstotliwości kursowania.
+- Warstwa przystanków używa FastMarkerCluster. Klastrowanie wyłącza się przy zoomie 14; maxClusterRadius wynosi 35.
+- Maksymalnie cztery z ośmiu warstw tematycznych mogą być włączone równocześnie.
+
+5. GEOKODOWANIE
+
+Moduł app/address_search.py korzysta z Nominatim/OpenStreetMap. Zapytanie zawiera adres dopisany do „Kraków, Polska”, ogranicza wyniki do Polski i obszaru mapy Krakowa. Geolokator jest przechowywany przez st.cache_resource. RateLimiter ustawia minimalny odstęp 1,1 s między zapytaniami. Wynik geokodowania jest buforowany przez 24 godziny przez st.cache_data.
+
+Wpisany adres jest wysyłany do zewnętrznej usługi geokodującej. Funkcja wymaga połączenia z Internetem. Aplikacja nie wyznacza tras ulicami ani czasu dojścia.
+
+6. ARCHITEKTURA KODU
+
+app/Strona_Główna.py
+  Punkt wejścia Streamlit i strona główna.
+
+app/pages/1_Mapa_Miasta_i_Infrastruktura.py
+  Wczytuje dane przestrzenne, zarządza warstwami, buduje mapę Folium i obsługuje wyszukiwanie adresu.
+
+app/pages/2_Statystyki_i_Analiza_Demograficzna.py
+  Wczytuje dane miejskie i dane o przedszkolach, stosuje filtry i tworzy wykresy Plotly.
+
+app/address_search.py
+  Geokodowanie adresu, obliczanie najbliższego punktu i formatowanie odległości.
+
+app/styles.py, app/styles.css
+  Wspólne style interfejsu Streamlit.
+
+data/
+  Pliki źródłowe CSV.
+
+.streamlit/config.toml
+  Konfiguracja motywu aplikacji.
+
+Ścieżki do danych są wyznaczane względem plików aplikacji. Zachowanie struktury katalogów jest wymagane. Instrukcja uruchomienia znajduje się w osobnym pliku INSTRUKCJA_URUCHOMIENIA.txt.
+
+7. CACHE I STAN APLIKACJI
+
+- st.cache_data buforuje wczytane dane i kosztowne wyniki przetwarzania.
+- Cache przystanków i przedszkoli uwzględnia czas modyfikacji pliku jako argument funkcji.
+- st.session_state przechowuje stan warstw mapy i wynik wyszukiwania adresu podczas sesji.
+- Zmiana kontrolek Streamlit powoduje ponowne wykonanie odpowiedniej strony.
+
+8. OGRANICZENIA
+
+- Odległości są liczone w linii prostej i nie odpowiadają trasie pieszej ani czasowi dojazdu.
+- Dostępne dane demograficzne dotyczą całego Krakowa; nie ma danych w podziale na konkretne dzielnice.
+
+9. MOŻLIWOŚCI ROZWOJU TECHNICZNEGO
+
+- Edukacyjny tryb interaktywny oparty na istniejących danych, warstwach mapy i st.session_state.
+- Rozszerzenie mapy o lokalizacje szkół podstawowych, szkół ponadpodstawowych, Centrów Aktywności Seniora, bibliotek i innych placówek. Wymaga dodania i przygotowania zbiorów lokalizacyjnych, loaderów danych oraz osobnych warstw mapy.
