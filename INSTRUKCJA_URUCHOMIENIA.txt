@@ -1,0 +1,44 @@
+INSTRUKCJA URUCHOMIENIA — KRAKÓW OPEN DATA
+
+Wymagania
+- Python 3.10 lub nowszy.
+- Połączenie z Internetem do zainstalowania bibliotek. Wyszukiwanie adresu również wymaga Internetu.
+- Otrzymany folder projektu z zachowanym układem katalogów.
+
+Windows (PowerShell)
+
+1. Zainstaluj Python, jeśli nie jest jeszcze dostępny.
+2. Otwórz PowerShell w folderze projektu.
+3. Utwórz osobne środowisko dla aplikacji:
+
+   py -m venv .venv
+
+4. Zainstaluj biblioteki wymagane przez aplikację:
+
+   .\.venv\Scripts\python.exe -m pip install --upgrade pip
+   .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+
+5. Uruchom aplikację:
+
+   .\.venv\Scripts\python.exe -m streamlit run app/Strona_Główna.py
+
+6. Otwórz w przeglądarce adres pokazany przez Streamlit. Zwykle jest to:
+
+   http://localhost:8501
+
+Jeśli środowisko .venv zostało już utworzone, pomiń krok 3.
+
+macOS lub Linux
+
+Otwórz terminal w folderze projektu i wykonaj:
+
+   python3 -m venv .venv
+   ./.venv/bin/python -m pip install --upgrade pip
+   ./.venv/bin/python -m pip install -r requirements.txt
+   ./.venv/bin/python -m streamlit run app/Strona_Główna.py
+
+Następnie otwórz adres wyświetlony przez Streamlit, zwykle http://localhost:8501.
+
+Informacja o wyszukiwaniu adresu
+
+Wpisany adres jest wysyłany do usługi Nominatim/OpenStreetMap, aby znaleźć jego współrzędne. Aplikacja oblicza odległość w linii prostej do najbliższego przystanku i przedszkola. Nie wyznacza trasy ulicami ani czasu dojazdu.

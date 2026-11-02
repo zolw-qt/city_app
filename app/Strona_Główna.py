@@ -1,26 +1,11 @@
 import streamlit as st
 from styles import inject_css
 
-from streamlit_extras.let_it_rain import *
-
-rain(
-    emoji="📈",
-    font_size=54,
-    falling_speed=5,
-    animation_length="3s",
-)
-
 # Konfiguracja strony
 st.set_page_config(
     page_title="Open Data App - Kraków", layout="wide", initial_sidebar_state="expanded"
 )
 
-# Style CSS paska bocznego oraz przycisku zwijania
-st.set_page_config(
-    page_title="Statystyki i Analiza Demograficzna",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
 inject_css()
 
 # Definicje wektorów SVG dla ikon z Phosphor Icons
@@ -47,26 +32,24 @@ col_desc, col_info = st.columns([2, 1])
 
 with col_desc:
     st.markdown(
-        f"### {ICON_TARGET} Cel i Wizja Projektu", unsafe_allow_html=True, anchors=False
+        f"### {ICON_TARGET} O projekcie", unsafe_allow_html=True, anchors=False
     )
     st.write("""
-    Prototyp aplikacji powstał w ramach konkursu **Kraków Open Data App**.\n
-    Celem aplikacji jest zainteresowanie użytkowników otwartymi danymi i zachęcić do własnej zabawy i analizy
-    oraz ułatwić porównywanie dzielnic Krakowa osobom szukającym mieszkania na wynajem, pod względem dostępności infrastruktury miejskiej.
-    W przyszłości aplikacja może zostać uzupełniona o dane takie jak szkoły podstawowe, szkoły ponadpodstawowe oraz inne elmenty miasta.
+    Kraków Open Data App to prototyp, który zaprasza do odkrywania otwartych danych miejskich. Na interaktywnej mapie można zobaczyć punkty przystanków i przedszkoli, a na wykresach — ogólne trendy demograficzne Krakowa.
+
+    To także miejsce do nauki przez zabawę i samodzielne eksperymentowanie. Możesz sprawdzić, jak zmienia się widok mapy po włączeniu heatmapy, dowiedzieć się, czym jest taka forma prezentacji i co można z niej odczytać. Aplikacja może być pomocna osobom rozważającym zamieszkanie w Krakowie, szczególnie młodym osobom i rodzinom.
+
+    Pokazywane statystyki demograficzne dotyczą całego miasta. Mapa nie ocenia jakości placówek ani nie pokazuje czasu dojazdu. W kolejnych wersjach można dodać dane o szkołach, przychodniach, parkach i innych miejscach.
     """)
 
-    # Prototyp aplik jest ułatwienie osobom 
-    # szukającym mieszkania na wynajem, a szczególnie młodym osobom i rodzinom, oceny jakości życia i dostępności 
-    # infrastruktury miejskiej w poszczególnych rejonach Krakowa.
 
 with col_info:
     st.info("""
     **Wykorzystane otwarte dane z portalu Miejskiego:**
 
-    * [Rejestr przystanków komunikacji miejskiej](https://otwartedane.um.krakow.pl/zbiory-danych/przystanki-komunikacji-miejskiej-w-krakowie)
-    * [Baza samorządowych i niesamorządowych przedszkoli](https://otwartedane.um.krakow.pl/zbiory-danych/przedszkola-w-krakowie-liczba-dzieci)
-    * [Statystyki demograficzne miasta od 1995 r.](https://otwartedane.um.krakow.pl/zbiory-danych/zbiorcze-statystyki-demograficzne-dla-krakowa-od-1995-roku)
+    * [Komunikacja Miejska w Krakowie (KMK) — baza przystanków](https://otwartedane.um.krakow.pl/zbiory-danych/komunikacja-miejska-w-krakowie-kmk)
+    * [Przedszkola w Krakowie — liczba dzieci](https://otwartedane.um.krakow.pl/zbiory-danych/przedszkola-w-krakowie-liczba-dzieci)
+    * [Statystyki demograficzne Krakowa](https://otwartedane.um.krakow.pl/zbiory-danych/krakow-statystyki-demograficzne)
     """)
 
 st.markdown("---")
@@ -87,7 +70,10 @@ with col1:
             unsafe_allow_html=True,
             anchors=False,
         )
-        st.write("Interaktywna mapa Krakowa z warstwami heatmap.")
+        st.write(
+            "Interaktywna mapa Krakowa z punktami, heatmapami, heksagonami i "
+            "diagramami Voronoi dla przystanków oraz przedszkoli."
+        )
         st.markdown(
             "*Przejdź do zakładki **Mapa Miasta i Infrastruktura** w panelu bocznym.*"
         )
