@@ -1,9 +1,14 @@
 from html import escape
+import math
+import json
 from pathlib import Path
 import geopandas as gpd
 import pandas as pd
 import folium
 import streamlit as st
+from shapely.geometry import MultiPoint, Point, Polygon, box
+from shapely.ops import voronoi_diagram
+from shapely.strtree import STRtree
 
 from folium.plugins import FastMarkerCluster, HeatMap
 from streamlit_folium import st_folium
@@ -37,7 +42,7 @@ st.markdown(
 )
 
 st.caption(
-    "Sprawdź rozmieszczenie przystanków komunikacji miejskiej i ich zagęszczenie "
+    "Sprawdź rozmieszczenie punktów przystanków komunikacji miejskiej i ich zagęszczenie "
     "w różnych częściach Krakowa."
 )
 
@@ -161,6 +166,191 @@ def load_preschools(path: str, modified_at: float) -> gpd.GeoDataFrame:
         crs="EPSG:4326",
     )
 
+
+def _projected_geojson(geometries, properties=None) -> str:
+    """Serializuje geometrie w EPSG:2180 jako GeoJSON w EPSG:4326."""
+    frame = gpd.GeoDataFrame(
+        properties or {},
+        geometry=geometries,
+        crs="EPSG:2180",
+    ).to_crs("EPSG:4326")
+    return frame.to_json(drop_id=True)
+
+
+@st.cache_data(show_spinner=False)
+def build_hexagons_geojson(projected_coords, bounds, hex_radius_m=350) -> str:
+    """Agreguje punkty do heksagonów w metrycznym układzie EPSG:2180."""
+    counts = {}
+    root3 = 3**0.5
+
+    def cube_round(q_float, r_float):
+        x_float = q_float
+        z_float = r_float
+        y_float = -x_float - z_float
+        x_round, y_round, z_round = round(x_float), round(y_float), round(z_float)
+        x_diff = abs(x_round - x_float)
+        y_diff = abs(y_round - y_float)
+        z_diff = abs(z_round - z_float)
+        if x_diff > y_diff and x_diff > z_diff:
+            x_round = -y_round - z_round
+        elif y_diff > z_diff:
+            y_round = -x_round - z_round
+        else:
+            z_round = -x_round - y_round
+        return x_round, z_round
+
+    for x_coord, y_coord in projected_coords:
+        q_float = (root3 / 3 * x_coord - y_coord / 3) / hex_radius_m
+        r_float = (2 / 3 * y_coord) / hex_radius_m
+        cell = cube_round(q_float, r_float)
+        counts[cell] = counts.get(cell, 0) + 1
+
+    clip_area = box(*bounds)
+    geometries = []
+    cell_counts = []
+    for (q, r), count in counts.items():
+        center_x = hex_radius_m * root3 * (q + r / 2)
+        center_y = hex_radius_m * 1.5 * r
+        vertices = [
+            (
+                center_x + hex_radius_m * math.cos(math.radians(30 + 60 * angle)),
+                center_y + hex_radius_m * math.sin(math.radians(30 + 60 * angle)),
+            )
+            for angle in range(6)
+        ]
+        clipped = Polygon(vertices).intersection(clip_area)
+        if not clipped.is_empty:
+            geometries.append(clipped)
+            cell_counts.append(count)
+
+    return _projected_geojson(geometries, {"count": cell_counts})
+
+
+@st.cache_data(show_spinner=False)
+def build_voronoi_geojson(projected_sites, bounds) -> str:
+    """Buduje komórki Voronoi z etykietą najbliższego punktu."""
+    sites_by_coordinate = {}
+    for x_coord, y_coord, name in projected_sites:
+        key = (round(x_coord, 2), round(y_coord, 2))
+        if key not in sites_by_coordinate:
+            sites_by_coordinate[key] = {
+                "coordinate": (x_coord, y_coord),
+                "names": [],
+            }
+        if name and name not in sites_by_coordinate[key]["names"]:
+            sites_by_coordinate[key]["names"].append(name)
+
+    unique_coords = tuple(
+        site["coordinate"] for site in sites_by_coordinate.values()
+    )
+    site_names = [
+        escape(", ".join(site["names"]))
+        for site in sites_by_coordinate.values()
+    ]
+    if len(unique_coords) < 2:
+        return _projected_geojson([], {})
+
+    map_area = box(*bounds)
+    diagram = voronoi_diagram(
+        MultiPoint(unique_coords),
+        envelope=map_area,
+        edges=False,
+    )
+    site_tree = STRtree([Point(coordinate) for coordinate in unique_coords])
+    cells = []
+    nearest_names = []
+    for cell in diagram.geoms:
+        clipped_cell = cell.intersection(map_area)
+        if clipped_cell.is_empty:
+            continue
+        nearest_index = int(site_tree.nearest(clipped_cell.representative_point()))
+        cells.append(clipped_cell)
+        nearest_names.append(site_names[nearest_index])
+
+    return _projected_geojson(cells, {"nearest_name": nearest_names})
+
+
+def add_hexagon_layer(city_map, data, layer_name, color, count_alias):
+    features = json.loads(data).get("features", [])
+    max_count = max(
+        (feature["properties"]["count"] for feature in features),
+        default=1,
+    )
+    palette = ["#F1F5F9", "#CBD5E1", "#94A3B8", color]
+
+    def style_hexagon(feature):
+        count = feature["properties"]["count"]
+        color_index = min(int((count / max_count) * len(palette)), len(palette) - 1)
+        return {
+            "color": color,
+            "weight": 1,
+            "fillColor": palette[color_index],
+            "fillOpacity": 0.65,
+        }
+
+    folium.GeoJson(
+        data,
+        name=layer_name,
+        style_function=style_hexagon,
+        tooltip=folium.GeoJsonTooltip(
+            fields=["count"],
+            aliases=[count_alias],
+            localize=True,
+        ),
+    ).add_to(city_map)
+
+
+def add_voronoi_layer(city_map, data, layer_name, color, tooltip_alias):
+    folium.GeoJson(
+        data,
+        name=layer_name,
+        style_function=lambda feature: {
+            "color": color,
+            "weight": 1,
+            "fillColor": color,
+            "fillOpacity": 0.12,
+        },
+        tooltip=folium.GeoJsonTooltip(
+            fields=["nearest_name"],
+            aliases=[tooltip_alias],
+            sticky=True,
+        ),
+    ).add_to(city_map)
+
+
+MAX_ACTIVE_LAYERS = 4
+LAYER_STATE_DEFAULTS = {
+    "layer_stops_points": True,
+    "layer_stops_heatmap": False,
+    "layer_stops_hexagons": False,
+    "layer_stops_voronoi": False,
+    "layer_preschools_points": False,
+    "layer_preschools_heatmap": False,
+    "layer_preschools_hexagons": False,
+    "layer_preschools_voronoi": False,
+}
+
+
+def enforce_layer_limit(changed_key):
+    active_layers = sum(
+        bool(st.session_state.get(key, False)) for key in LAYER_STATE_DEFAULTS
+    )
+    if active_layers > MAX_ACTIVE_LAYERS:
+        st.session_state[changed_key] = False
+        st.session_state["layer_limit_notice"] = True
+    else:
+        st.session_state["layer_limit_notice"] = False
+
+
+def layer_checkbox(label, key, disabled=False):
+    return st.checkbox(
+        label,
+        key=key,
+        disabled=disabled,
+        on_change=enforce_layer_limit,
+        args=(key,),
+    )
+
 if not STOPS_FILE.is_file():
     st.error(
         "Nie znaleziono pliku z lokalizacjami przystanków. "
@@ -195,15 +385,74 @@ else:
     except (OSError, pd.errors.ParserError, ValueError) as exc:
         st.error(f"Nie udało się wczytać danych przedszkoli: {exc}")
 
+LAYER_STATE_DEFAULTS["layer_preschools_points"] = (
+    preschools is not None and not preschools.empty
+)
+
 with st.sidebar:
     st.markdown("### Warstwy mapy")
-    points_on = st.checkbox("Punkty przystanków", value=True)
-    heatmap_on = st.checkbox("Zagęszczenie przystanków", value=False)
-    preschools_on = st.checkbox(
-    "Punkty przedszkoli",
-    value=preschools is not None and not preschools.empty,
-    disabled=preschools is None or preschools.empty,
+    if preschools is None or preschools.empty:
+        for key in (
+            "layer_preschools_points",
+            "layer_preschools_heatmap",
+            "layer_preschools_hexagons",
+            "layer_preschools_voronoi",
+        ):
+            st.session_state[key] = False
+    for key, default in LAYER_STATE_DEFAULTS.items():
+        st.session_state.setdefault(key, default)
+
+    points_on = layer_checkbox("Punkty przystanków", "layer_stops_points")
+    heatmap_on = layer_checkbox(
+        "Zagęszczenie punktów przystanków",
+        "layer_stops_heatmap",
     )
+    stops_hexagons_on = layer_checkbox(
+        "Heksagony punktów przystanków",
+        "layer_stops_hexagons",
+    )
+    stops_voronoi_on = layer_checkbox(
+        "Voronoi punktów przystanków",
+        "layer_stops_voronoi",
+    )
+    preschools_on = layer_checkbox(
+        "Punkty przedszkoli",
+        "layer_preschools_points",
+        disabled=preschools is None or preschools.empty,
+    )
+    preschool_heatmap_on = layer_checkbox(
+        "Zagęszczenie punktów przedszkoli",
+        "layer_preschools_heatmap",
+        disabled=preschools is None or preschools.empty,
+    )
+    preschools_hexagons_on = layer_checkbox(
+        "Heksagony punktów przedszkoli",
+        "layer_preschools_hexagons",
+        disabled=preschools is None or preschools.empty,
+    )
+    preschools_voronoi_on = layer_checkbox(
+        "Voronoi punktów przedszkoli",
+        "layer_preschools_voronoi",
+        disabled=preschools is None or preschools.empty,
+    )
+    if st.session_state.get("layer_limit_notice"):
+        st.markdown(
+            """
+            <style>
+            .layer-limit-notice {
+                color: #FFFFFF !important;
+                background: rgba(255, 255, 255, 0.10);
+                border-left: 4px solid #8AB4F8;
+                border-radius: 0.4rem;
+                padding: 0.65rem 0.8rem;
+            }
+            </style>
+            <div class="layer-limit-notice">
+                Możesz włączyć maksymalnie 4 warstwy naraz. Odznacz jedną z aktywnych warstw, aby włączyć kolejną.
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
 
 center = [float(stops.geometry.y.mean()), float(stops.geometry.x.mean())]
@@ -222,6 +471,77 @@ search_bounds = (
     map_min_lon,
     map_max_lon,
 )
+
+derived_maps_requested = any(
+    (
+        stops_hexagons_on,
+        stops_voronoi_on,
+        preschools_hexagons_on,
+        preschools_voronoi_on,
+    )
+)
+if derived_maps_requested:
+    stops_metric = stops.to_crs("EPSG:2180")
+    stops_projected_coords = tuple(
+        zip(stops_metric.geometry.x.tolist(), stops_metric.geometry.y.tolist())
+    )
+    stops_projected_sites = tuple(
+        (
+            float(point.x),
+            float(point.y),
+            str(name).strip() if pd.notna(name) and str(name).strip() else "Przystanek komunikacji miejskiej",
+        )
+        for point, name in zip(
+            stops_metric.geometry,
+            stops[stops_name_column]
+            if stops_name_column in stops.columns
+            else ["Przystanek komunikacji miejskiej"] * len(stops),
+        )
+    )
+    map_area = gpd.GeoSeries(
+        [box(map_min_lon, map_min_lat, map_max_lon, map_max_lat)],
+        crs="EPSG:4326",
+    ).to_crs("EPSG:2180").iloc[0]
+    if preschools is not None and not preschools.empty:
+        preschools_metric = preschools.to_crs("EPSG:2180")
+        preschools_projected_coords = tuple(
+            zip(
+                preschools_metric.geometry.x.tolist(),
+                preschools_metric.geometry.y.tolist(),
+            )
+        )
+        preschools_projected_sites = tuple(
+            (
+                float(point.x),
+                float(point.y),
+                str(name).strip().title()
+                if pd.notna(name) and str(name).strip()
+                else "Przedszkole",
+            )
+            for point, name in zip(
+                preschools_metric.geometry,
+                preschools[preschool_name_column]
+                if preschool_name_column in preschools.columns
+                else ["Przedszkole"] * len(preschools),
+            )
+        )
+        all_projected_coords = stops_projected_coords + preschools_projected_coords
+    else:
+        preschools_projected_coords = ()
+        preschools_projected_sites = ()
+        all_projected_coords = stops_projected_coords
+
+    min_x, min_y, max_x, max_y = map_area.bounds
+    points_min_x = min(point[0] for point in all_projected_coords)
+    points_min_y = min(point[1] for point in all_projected_coords)
+    points_max_x = max(point[0] for point in all_projected_coords)
+    points_max_y = max(point[1] for point in all_projected_coords)
+    voronoi_bounds = (
+        min(min_x, points_min_x) - 10,
+        min(min_y, points_min_y) - 10,
+        max(max_x, points_max_x) + 10,
+        max(max_y, points_max_y) + 10,
+    )
 
 st.markdown("### Znajdź najbliższe miejsca")
 
@@ -366,7 +686,7 @@ if points_on:
         var marker = L.marker([row[0], row[1]], {
             icon: L.divIcon({
                 className: 'stop-marker-icon',
-                html: '<div style="box-sizing:border-box;width:10px;height:10px;border:1px solid #1B3A5C;border-radius:50%;background:#2E86C1;opacity:0.95;"></div>',
+                html: '<div style="box-sizing:border-box;width:10px;height:10px;border:1px solid #34205F;border-radius:50%;background:#4B2E83;opacity:0.95;"></div>',
                 iconSize: [12, 12],
                 iconAnchor: [6, 6]
             })
@@ -390,7 +710,7 @@ if points_on:
     point_layer.add_to(city_map)
 
 if heatmap_on:
-    heat_layer = folium.FeatureGroup(name="Zagęszczenie przystanków", show=True)
+    heat_layer = folium.FeatureGroup(name="Zagęszczenie punktów przystanków", show=True)
     HeatMap(
         [[point.y, point.x] for point in stops.geometry],
         radius=18,
@@ -399,11 +719,76 @@ if heatmap_on:
     ).add_to(heat_layer)
     heat_layer.add_to(city_map)
 
+if preschool_heatmap_on and preschools is not None and not preschools.empty:
+    preschool_heat_layer = folium.FeatureGroup(
+        name="Zagęszczenie punktów przedszkoli",
+        show=True,
+    )
+    HeatMap(
+        [[point.y, point.x] for point in preschools.geometry],
+        radius=18,
+        blur=15,
+        min_opacity=0.25,
+    ).add_to(preschool_heat_layer)
+    preschool_heat_layer.add_to(city_map)
+
+if stops_hexagons_on:
+    stops_hexagons = build_hexagons_geojson(
+        stops_projected_coords,
+        voronoi_bounds,
+    )
+    add_hexagon_layer(
+        city_map,
+        stops_hexagons,
+        "Heksagony punktów przystanków",
+        "#4B2E83",
+        "Liczba punktów przystanków w heksagonie:",
+    )
+
+if stops_voronoi_on:
+    stops_voronoi = build_voronoi_geojson(
+        stops_projected_sites,
+        voronoi_bounds,
+    )
+    add_voronoi_layer(
+        city_map,
+        stops_voronoi,
+        "Voronoi punktów przystanków",
+        "#4B2E83",
+        "Najbliższy przystanek:",
+    )
+
+if preschools_hexagons_on and preschools_projected_coords:
+    preschools_hexagons = build_hexagons_geojson(
+        preschools_projected_coords,
+        voronoi_bounds,
+    )
+    add_hexagon_layer(
+        city_map,
+        preschools_hexagons,
+        "Heksagony punktów przedszkoli",
+        "#2E8B57",
+        "Liczba punktów przedszkoli w heksagonie:",
+    )
+
+if preschools_voronoi_on and preschools_projected_coords:
+    preschools_voronoi = build_voronoi_geojson(
+        preschools_projected_sites,
+        voronoi_bounds,
+    )
+    add_voronoi_layer(
+        city_map,
+        preschools_voronoi,
+        "Voronoi punktów przedszkoli",
+        "#2E8B57",
+        "Najbliższe przedszkole:",
+    )
+
 
 
 if preschools_on and preschools is not None:
     preschool_layer = folium.FeatureGroup(
-        name="Przedszkola",
+        name="Punkty przedszkoli",
         show=True,
     )
 
@@ -426,9 +811,9 @@ if preschools_on and preschools is not None:
         folium.CircleMarker(
             location=[point.y, point.x],
             radius=5,
-            color="#1B3A5C",
+            color="#1F6B45",
             fill=True,
-            fill_color="#F4A261",
+            fill_color="#2E8B57",
             fill_opacity=0.9,
             weight=1,
             tooltip=folium.Tooltip(tooltip_html, sticky=True),
@@ -454,7 +839,7 @@ if search_result:
                 address_location,
                 [nearest_stop["latitude"], nearest_stop["longitude"]],
             ],
-            color="#2E86C1",
+            color="#4B2E83",
             weight=2,
             dash_array="6, 6",
         ).add_to(city_map)
@@ -465,9 +850,9 @@ if search_result:
                 nearest_stop["longitude"],
             ],
             radius=9,
-            color="#1B3A5C",
+            color="#34205F",
             fill=True,
-            fill_color="#2E86C1",
+            fill_color="#4B2E83",
             fill_opacity=1,
             tooltip=(
                 f"Najbliższy przystanek: {escape(nearest_stop['name'])} "
@@ -484,7 +869,7 @@ if search_result:
                     nearest_preschool["longitude"],
                 ],
             ],
-            color="#F4A261",
+            color="#2E8B57",
             weight=2,
             dash_array="6, 6",
         ).add_to(city_map)
@@ -495,9 +880,9 @@ if search_result:
                 nearest_preschool["longitude"],
             ],
             radius=9,
-            color="#1B3A5C",
+            color="#1F6B45",
             fill=True,
-            fill_color="#F4A261",
+            fill_color="#2E8B57",
             fill_opacity=1,
             tooltip=(
                 f"Najbliższe przedszkole: "
@@ -506,15 +891,36 @@ if search_result:
             ),
         ).add_to(city_map)
 
-folium.LayerControl(collapsed=False).add_to(city_map)
+legend = folium.Element(
+    '<div style="position:fixed;bottom:28px;left:12px;z-index:9999;'
+    'background:rgba(255,255,255,.96);padding:10px 13px;border:1px solid #bbb;'
+    'border-radius:5px;box-shadow:0 1px 5px #999;font:14px/1.6 Arial,sans-serif;">'
+    '<strong>Legenda</strong><br>'
+    '<span style="display:inline-block;width:11px;height:11px;border-radius:50%;'
+    'background:#4B2E83;border:1px solid #34205F;margin-right:7px;"></span>'
+    'Punkty przystanków<br>'
+    '<span style="display:inline-block;width:11px;height:11px;border-radius:50%;'
+    'background:#2E8B57;border:1px solid #1F6B45;margin-right:7px;"></span>'
+    'Punkty przedszkoli<br>'
+    '<span style="display:inline-block;width:12px;height:12px;background:#94A3B8;'
+    'border:1px solid #4B2E83;margin-right:7px;"></span>'
+    'Heksagony: liczba punktów w komórce<br>'
+    '<span style="display:inline-block;width:12px;height:12px;background:#FFFFFF;'
+    'border:2px solid #4B2E83;margin-right:7px;"></span>'
+    'Voronoi: obszar najbliższej lokalizacji<br>'
+    '<span style="display:inline-block;width:54px;height:9px;vertical-align:middle;'
+    'background:linear-gradient(to right,blue,lime,red);margin-right:7px;"></span>'
+    'Heatmapy: większe zagęszczenie lokalizacji</div>'
+)
+city_map.get_root().html.add_child(legend)
 st.markdown(
     """
     <style>
     .stop-marker-icon { background: transparent; border: 0; }
     .stop-marker-dot {
         display: block; width: 10px; height: 10px;
-        border: 1px solid #1B3A5C; border-radius: 50%;
-        background: #2E86C1; opacity: 0.9;
+        border: 1px solid #34205F; border-radius: 50%;
+        background: #4B2E83; opacity: 0.9;
     }
     </style>
     """,
@@ -527,16 +933,26 @@ st_folium(
     key="city_map",
 )
 st.caption(
-    f"Na mapie pokazano {len(stops):,} lokalizacji przystanków, {len(preschools):,} lokalizacji przedszkoli. "
-    "Punkty opisują miejsca przystanków; dostępne dane nie pokazują przebiegu tras "
-    "ani częstotliwości kursowania."
+    f"Na mapie pokazano {len(stops):,} punktów przystanków, {len(preschools):,} punktów przedszkoli. "
+    "Heatmapy pokazują skupiska lokalizacji, a nie jakość placówek ani liczbę miejsc. "
+    "Dane o przystankach nie pokazują przebiegu tras ani częstotliwości kursowania."
 )
 
 stoggle(
     "Czym jest heatmapa?",
     """Heatmapa (mapa cieplna) to graficzny sposób przedstawienia danych za pomocą kolorów. 
-    Ciepłe kolory to miejsca "gorące" tam gdzie punktów jest najwięcej, a zimne kolory, takie jak niebieski i zielony to miejsca gdzie punktów jest mniej.
-    Spróbuj włączyć "Zagęszczenie przystanków" na mapie, aby ją zobaczyć.""",
+    Cieplejszy kolor oznacza większe skupienie lokalizacji w danym obszarze, a chłodniejszy — mniejsze. Heatmapa nie pokazuje liczby miejsc w placówkach ani częstotliwości kursowania.
+    Spróbuj włączyć "Zagęszczenie punktów przystanków" lub "Zagęszczenie punktów przedszkoli" w panelu bocznym.""",
+)
+
+stoggle(
+    "Czym są heksagony?",
+    """Heksagony dzielą mapę na równe komórki. Liczba w komórce pokazuje liczbę punktów przystanków lub punktów przedszkoli, zależnie od wybranej warstwy. Najedź na komórkę, aby sprawdzić dokładną wartość.""",
+)
+
+stoggle(
+    "Czym jest diagram Voronoi?",
+    """Voronoi dzieli mapę na obszary przypisane do najbliższych lokalizacji. Każdy obszar zawiera miejsca, z których najbliżej jest do wyznaczającego go punktu przystanku lub przedszkola. Podział opiera się na odległości w linii prostej. Diagram Voronoi nosi nazwę na cześć matematyka Georgija Woronogo.""",
 )
 
 stoggle(
